@@ -6,6 +6,9 @@ export default {
     ],
     theme: {
         extend: {},
+        colors: {
+            "azul-milagro": "#02366f",
+        },
     },
     plugins: [require("flowbite/plugin")],
 };
