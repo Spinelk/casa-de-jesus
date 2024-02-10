@@ -1,141 +1,89 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
+
+import IconoInstagram from "./IconoInstagram.astro";
+import IconoFacebook from "./IconoFacebook.astro";
 ---
 
-<header>
-    <nav>
-        <div class="Navbar_Brand">
-            <!-- <h2><a href="/">{SITE_TITLE}</a></h2> -->
-            <img src="logo.webp" alt="" style="aspect-ratio: 1; width: 50px;" />
+<nav class="max-md:bg-azul-milagro bg-white dark:bg-gray-900">
+    <div class="border-b-[1px] border-gray hidden md:block">
+        <div class="max-w-5xl grid grid-cols-4 mx-auto">
+            <div
+                class="border-s-[1px] border-gray text-center p-2 font-monserrat text-sm"
+            >
+                Dirección@correo.com
+            </div>
+            <div
+                class="border-x-[1px] border-gray text-center p-2 col-span-2 font-cinzel font-semibold"
+            >
+                Por una vida sin drogas
+            </div>
+            <div
+                class="border-e-[1px] border-gray text-center p-2 flex justify-around items-center"
+            >
+                <ul class="flex flex-row gap-4">
+                    <li
+                        class="saturate-0 hover:saturate-150 transition-all duration-300"
+                    >
+                        <IconoFacebook
+                            href="https://web.facebook.com/fundacioneiglesiacasadejesus/?_rdc=1&_rdr"
+                        />
+                    </li>
+
+                    <li
+                        class="saturate-0 hover:saturate-150 transition-all duration-300"
+                    >
+                        <IconoInstagram
+                            href="https://www.instagram.com/casadejesusoficial/"
+                        />
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="Navbar_Toggle">
+    </div>
+    <div
+        class="max-w-6xl flex flex-wrap items-center justify-between mx-auto p-3"
+    >
+        <a class="flex items-center space-x-3 rtl:space-x-reverse" href="/">
+            <img src="logo.png" class="h-10 md:h-16" alt="Logo Fundación" />
+            <span
+                class="font-cinzel self-center text-2xl font-bold whitespace-nowrap text-azul-milagro dark:text-white hidden lg:inline"
+                >Fundación<span class="block -mt-2">Casa de Jesús</span></span
+            >
+        </a>
+        <button
+            data-collapse-toggle="navbar-default"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden focus:outline-none"
+            aria-controls="navbar-default"
+            aria-expanded="false"
+        >
+            <span class="sr-only">Abrir menu lateral</span>
             <svg
+                class="w-5 h-5"
+                aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
-                width="50"
-                height="50"
-                viewBox="0 0 72 72"
+                fill="none"
+                viewBox="0 0 17 14"
             >
                 <path
-                    d="M56 48c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 48 54.798 48 56 48zM56 32c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 32 54.798 32 56 32zM56 16c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 16 54.798 16 56 16z"
-                ></path>
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M1 1h15M1 7h15M1 13h15"></path>
             </svg>
-        </div>
-        <div class="Navbar_Items">
-            <div class="Internal_Links">
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul
+                class="bg-white flex gap-2 max-md:flex-col max-md:absolute max-md:top-16 max-md:left-0 max-md:w-full z-40"
+            >
                 <HeaderLink href="/">Inicio</HeaderLink>
                 <HeaderLink href="/nosotros">Sobre Nosotros</HeaderLink>
                 <HeaderLink href="/ayuda">¿Necesitas Ayuda?</HeaderLink>
-                <HeaderLink href="#">Contacto</HeaderLink>
-                <HeaderLink href="#">Galeria</HeaderLink>
-                <!-- <HeaderLink href="/blog">Blog</HeaderLink> -->
-            </div>
+                <HeaderLink href="/contacto">Contacto</HeaderLink>
+                <HeaderLink href="/galeria">Galeria</HeaderLink>
+            </ul>
         </div>
-    </nav>
-</header>
-<script>
-    function classToggle() {
-        const navs = document.querySelectorAll(".Navbar_Items");
-
-        navs.forEach((nav) => nav.classList.toggle("Navbar_ToggleShow"));
-    }
-
-    const navbarLinkToggle = document.querySelector(".Navbar_Toggle");
-    if (navbarLinkToggle) {
-        document.addEventListener("click", classToggle);
-    }
-</script>
-<style>
-    .Navbar_Brand {
-        padding: 15px 0 5px 0;
-    }
-
-    .Navbar_Items {
-        display: flex;
-        margin: auto;
-    }
-
-    .Navbar_Toggle {
-        display: none;
-        padding: 15px 0 5px 0;
-    }
-
-    .Internal_Links {
-        align-self: flex-start;
-    }
-
-    @media only screen and (max-width: 750px) {
-        .Internal_Links {
-            display: flex;
-            flex-direction: column;
-            padding: 0 20px;
-        }
-
-        .Navbar_Items,
-        nav {
-            flex-direction: column;
-        }
-
-        .Navbar_Items {
-            display: none;
-            position: absolute;
-            top: 90px;
-            width: 100%;
-            background-color: white;
-            box-shadow: 0 10px 8px rgba(var(--black), 10%);
-        }
-
-        .Navbar_ToggleShow {
-            display: flex;
-            padding: 0 40px;
-        }
-
-        .Navbar_Brand {
-            align-self: flex-start;
-            padding-left: 8px;
-        }
-        .Navbar_Toggle {
-            align-self: flex-end;
-            display: initial;
-            position: absolute;
-            cursor: pointer;
-            z-index: 1;
-        }
-    }
-</style>
-
-<style>
-    header {
-        margin: 0;
-        background: white;
-        box-shadow: 0 2px 8px rgba(var(--black), 5%);
-    }
-    h2 {
-        margin: 0;
-        font-size: 1em;
-    }
-
-    h2 a,
-    h2 a.active {
-        text-decoration: none;
-    }
-    nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        padding: 16px;
-        font-family: sans-serif;
-    }
-    nav a {
-        padding: 1em 0.5em;
-        color: var(--black);
-        border-bottom: 4px solid transparent;
-        text-decoration: none;
-    }
-    nav a.active {
-        text-decoration: none;
-        border-bottom-color: var(--accent);
-    }
-</style>
+    </div>
+</nav>
