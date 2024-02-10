@@ -9,6 +9,12 @@ export default {
         colors: {
             "azul-milagro": "#02366f",
         },
+        fontFamily: {
+            cinzel: ["Cinzel"],
+            monserrat: ["Montserrat"],
+            lato: ["Lato"],
+            poppins: ["Poppins"],
+        },
     },
     plugins: [require("flowbite/plugin")],
 };
