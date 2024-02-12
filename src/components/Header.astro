@@ -3,25 +3,112 @@ import HeaderLink from "./HeaderLink.astro";
 
 import IconoInstagram from "./IconoInstagram.astro";
 import IconoFacebook from "./IconoFacebook.astro";
+
+function esDiaYHoraEspecifica(
+    diaSemana: number,
+    horaInicio: number,
+    minutoInicio: number,
+    horaFin: number,
+    minutoFin: number,
+) {
+    // Obtener el día de la semana actual
+    const diaActual = new Date().getDay();
+
+    // Verificar si el día actual coincide con el día especificado
+    if (diaActual !== diaSemana) {
+        return false;
+    }
+
+    // Obtener la hora actual
+    const horaActual = new Date().getHours();
+    const minutoActual = new Date().getMinutes();
+
+    // Verificar si la hora actual está dentro del rango especificado
+    if (
+        horaActual > horaInicio ||
+        (horaActual === horaInicio && minutoActual >= minutoInicio)
+    ) {
+        if (
+            horaActual < horaFin ||
+            (horaActual === horaFin && minutoActual <= minutoFin)
+        ) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+var enVivo: boolean = false;
+
+// Domingos de 15:00 a 16:00
+const diaSemana = 0; // (0 = Domingo, 1 = Lunes, ..., 6 = Sábado)
+const horaInicio = 15;
+const minutoInicio = 0;
+const horaFin = 16;
+const minutoFin = 0;
+
+enVivo = esDiaYHoraEspecifica(
+    diaSemana,
+    horaInicio,
+    minutoInicio,
+    horaFin,
+    minutoFin,
+);
 ---
 
 <nav
-    class=" bg-white dark:bg-gray-900 fixed w-full z-50 top-0 start-0"
+    class="bg-white dark:bg-gray-900 fixed w-full z-50 top-0 start-0 font-monserrat"
 >
     <div class="border-b-[1px] border-gray hidden md:block">
         <div class="max-w-5xl grid grid-cols-4 mx-auto">
             <div
-                class="border-s-[1px] border-gray text-center p-2 font-monserrat text-sm"
+                class="border-s-[1px] border-gray p-2 flex justify-center items-center text-sm"
             >
                 Dirección@correo.com
             </div>
             <div
-                class="border-x-[1px] border-gray text-center p-2 col-span-2 font-cinzel font-semibold"
+                class="border-x-[1px] border-gray text-center p-2 font-cinzel text-sm col-span-2 flex justify-center items-center font-semibold"
             >
-                Por una vida sin drogas
+                <div class="flex justify-center gap-4 lg:gap-2">
+                    <div>
+                        <div>
+                            Por una vida sin drogas <span class="max-lg:hidden">
+                                -
+                            </span>
+                            <a
+                                class="hover:underline max-lg:block"
+                                href="https://www.radiocorporacion.cl/"
+                                target="_blank">Radio Coorporación 97.1 FM</a
+                            >
+                        </div>
+                        <div class="flex flex-row justify-center">
+                            <div class="flip">
+                                Todos los Domingos de 15 a 16 hrs
+                            </div>
+                            {
+                                enVivo && (
+                                    <>
+                                        <div class="mx-2">-</div>
+                                        <div class="flex gap-2">
+                                            <span>EN VIVO</span>
+
+                                            <div class="flex items-center aspect-square w-1">
+                                                <>
+                                                    <div class="bg-red-600 p-1.5 rounded-full aspect-square w-1 absolute" />
+                                                    <div class="bg-red-500 p-1.5 rounded-full aspect-square w-1 animate-ping" />
+                                                </>
+                                            </div>
+                                        </div>
+                                    </>
+                                )
+                            }
+                        </div>
+                    </div>
+                </div>
             </div>
             <div
-                class="border-e-[1px] border-gray text-center p-2 flex justify-around items-center"
+                class="border-e-[1px] border-gray p-2 flex justify-around items-center text-sm"
             >
                 <ul class="flex flex-row gap-4">
                     <li>
