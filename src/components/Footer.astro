@@ -2,47 +2,61 @@
 const today = new Date();
 ---
 
-<footer>
-    &copy; {today.getFullYear()} Fundación Casa de Jesus.
-    <div class="social-links">
-        <a
-            href="https://www.facebook.com/fundacioneiglesiacasadejesus/"
-            target="_blank"
-        >
-            <span class="sr-only">Siguenos en Facebook</span>
-            <svg
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-                width="32"
-                height="32"
-                astro-icon="social/facebook"
-                ><path
-                    fill="currentColor"
-                    d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"
-                ></path></svg
+<footer class="bg-white dark:bg-gray-900 drop-shadow-2xl">
+    <div class="w-full max-w-6xl mx-auto max-xl:px-3 py-4 md:py-8">
+        <div class="grid sm:grid-cols-2 max-sm:gap-5">
+            <div class="max-sm:mx-auto">
+                <a
+                    class="flex items-center space-x-3 rtl:space-x-reverse"
+                    href="/"
+                >
+                    <img
+                        src="logo.png"
+                        class="h-10 md:h-16"
+                        alt="Logo Fundación"
+                    />
+                    <span
+                        class="font-cinzel self-center text-2xl font-bold whitespace-nowrap text-azul-milagro dark:text-white"
+                        >Fundación<span class="block -mt-2">Casa de Jesús</span
+                        ></span
+                    >
+                </a>
+            </div>
+            <ul
+                class="font-poppins max-sm:mx-auto grid grid-cols-2 gap-8 sm:gap-0 sm:grid-cols-4 text-sm font-medium text-gray-500 dark:text-gray-400"
             >
-        </a>
+                <li class="grid justify-center items-center">
+                    <a href="/nosotros" class="hover:underline"
+                        >Sobre Nosotros</a
+                    >
+                </li>
+                <li class="grid justify-center items-center">
+                    <a href="/contacto" class="hover:underline">Contacto</a>
+                </li>
+                <li class="grid justify-center items-center">
+                    <a
+                        href="https://web.facebook.com/fundacioneiglesiacasadejesus/?_rdc=1&_rdr"
+                        class="hover:underline"
+                        target="_blank">Facebook</a
+                    >
+                </li>
+                <li class="grid justify-center items-center">
+                    <a
+                        href="https://www.instagram.com/casadejesusoficial/"
+                        class="hover:underline"
+                        target="_blank">Instagram</a
+                    >
+                </li>
+            </ul>
+        </div>
+        <hr
+            class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
+        />
+        <div class="flex justify-center">
+            <span
+                class="font-cinzel block text-sm text-gray-500 sm:text-center dark:text-gray-400"
+                >&copy; {today.getFullYear()} - Fundación Casa de Jesus.</span
+            >
+        </div>
     </div>
 </footer>
-
-<style>
-    footer {
-        padding: 2em 1em 6em 1em;
-        background: linear-gradient(var(--gray-gradient)) no-repeat;
-        color: rgb(var(--gray));
-        text-align: center;
-    }
-    .social-links {
-        display: flex;
-        justify-content: center;
-        gap: 1em;
-        margin-top: 1em;
-    }
-    .social-links a {
-        text-decoration: none;
-        color: rgb(var(--gray));
-    }
-    .social-links a:hover {
-        color: rgb(var(--gray-dark));
-    }
-</style>
