@@ -1,11 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Mapa from "../components/Mapa.astro";
-import ContactBanner from "../components/ContactBanner.astro";
+
+import Banner from "../components/Banner.astro";
 ---
 
 <Layout titulo="Contacto" descripcion="Contacta con nosotros">
-    <ContactBanner titulo="Contacto" imagen="Contacto.jpg" alt="Contacto">
+    <Banner titulo="Contacto" imagen="Contacto.jpg" alt="Contacto">
         A través de nuestras redes sociales o en nuestra casa de Talagante.
         <br />
         -Correo: ctcasadejesus@gmail.com
@@ -24,7 +25,7 @@ import ContactBanner from "../components/ContactBanner.astro";
                 >@casadejesusoficial</a
             >
         </p>
-    </ContactBanner>
+    </Banner>
     <Mapa
         titulo="Casa de Jesús Talagante"
         mapURL="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.2651064573997!2d-70.88782262430075!3d-33.65029207331107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662e17364112a05%3A0x4a847c9e9a1ef290!2sCam.%20El%20Oliveto%20200%2C%20Talagante%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1708137190908!5m2!1ses!2scl"
@@ -33,17 +34,15 @@ import ContactBanner from "../components/ContactBanner.astro";
         Ubicación La casa de Jesús junto con la Iglesia y la casa de adulto
         mayor de Talagante.
         <p>oliveto 200,Talagante. Santiago</p>
-
     </Mapa>
-
 </Layout>
 
-    <style>
-        a.active {
-            border-bottom: 3px solid var(--azul-milagro);
-        }
+<style>
+    a.active {
+        border-bottom: 3px solid var(--azul-milagro);
+    }
 
-        a:hover {
-            border-bottom: 3px solid var(--azul-milagro);
-        }
-    </style>
+    a:hover {
+        border-bottom: 3px solid var(--azul-milagro);
+    }
+</style>
