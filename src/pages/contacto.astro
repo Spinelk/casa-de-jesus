@@ -1,48 +1,67 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Mapa from "../components/Mapa.astro";
 
 import Banner from "../components/Banner.astro";
+import Seccion from "../components/Seccion.astro";
 ---
 
 <Layout titulo="Contacto" descripcion="Contacta con nosotros">
     <Banner titulo="Contacto" imagen="Contacto.jpg" alt="Contacto">
-        A través de nuestras redes sociales o en nuestra casa de Talagante.
-        <br />
-        -Correo: ctcasadejesus@gmail.com
-        <br />
-        -Telefono: (2) 2683 2719
-        <br />
-        <p>
-            -Facebook: <a
-                href="https://web.facebook.com/fundacioneiglesiacasadejesus/?_rdc=1&_rdr"
-                >Fundación e Iglesia "Casa de Jesús"</a
-            >
-        </p>
-        <br />
-        <p>
-            -Instagram: <a href="https://www.instagram.com/casadejesusoficial/"
-                >@casadejesusoficial</a
-            >
-        </p>
+        En nuestra casa de Talagante o a través de nuestras redes sociales:
+        <ul>
+            <li>Correo: ctcasadejesus@gmail.com</li>
+            <li>Telefono: (2) 2683 2719</li>
+            <li>
+                Facebook: <a
+                    href="https://web.facebook.com/fundacioneiglesiacasadejesus/?_rdc=1&_rdr"
+                    target="_blank"
+                    class="hover:underline"
+                    >Fundación e Iglesia "Casa de Jesús"</a
+                >
+            </li>
+            <li>
+                Instagram: <a
+                    href="https://www.instagram.com/casadejesusoficial/"
+                    target="_blank"
+                    class="hover:underline">@casadejesusoficial</a
+                >
+            </li>
+        </ul>
     </Banner>
-    <Mapa
+
+    <Seccion
         titulo="Casa de Jesús Talagante"
-        mapURL="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.2651064573997!2d-70.88782262430075!3d-33.65029207331107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662e17364112a05%3A0x4a847c9e9a1ef290!2sCam.%20El%20Oliveto%20200%2C%20Talagante%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1708137190908!5m2!1ses!2scl"
-        alt="Mapa de Talagante"
+        mapaURL="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.2651064573997!2d-70.88782262430075!3d-33.65029207331107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662e17364112a05%3A0x4a847c9e9a1ef290!2sCam.%20El%20Oliveto%20200%2C%20Talagante%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1708137190908!5m2!1ses!2scl"
     >
-        Ubicación La casa de Jesús junto con la Iglesia y la casa de adulto
-        mayor de Talagante.
-        <p>oliveto 200,Talagante. Santiago</p>
-    </Mapa>
+        <p slot="texto">
+            Ubicación La casa de Jesús junto con la Iglesia y la casa de adultos
+            mayores de Talagante.
+            <span class="block font-semibold text-gray-700 text-xl mt-1"
+                >Oliveto 200, Talagante. Santiago</span
+            >
+        </p>
+    </Seccion>
+
+    <Seccion
+        titulo="Región del Bio Bio"
+        invertir="true"
+        mapaURL="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.2651064573997!2d-70.88782262430075!3d-33.65029207331107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662e17364112a05%3A0x4a847c9e9a1ef290!2sCam.%20El%20Oliveto%20200%2C%20Talagante%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1708137190908!5m2!1ses!2scl"
+    >
+        <p slot="texto">
+            <span class="block font-semibold text-gray-700 text-xl mt-1"
+                >Paradero la Higuerilla kilómetro 6 ½, camino a Yumbel</span
+            >
+        </p>
+    </Seccion>
+
+    <Seccion
+        titulo="Región de Coquimbo"
+        mapaURL="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.2651064573997!2d-70.88782262430075!3d-33.65029207331107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662e17364112a05%3A0x4a847c9e9a1ef290!2sCam.%20El%20Oliveto%20200%2C%20Talagante%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1708137190908!5m2!1ses!2scl"
+    >
+        <p slot="texto">
+            <span class="block font-semibold text-gray-700 text-xl mt-1"
+                >Panamericana norte, km. 492, parcela 16, El Arrayán, La Serena</span
+            >
+        </p>
+    </Seccion>
 </Layout>
-
-<style>
-    a.active {
-        border-bottom: 3px solid var(--azul-milagro);
-    }
-
-    a:hover {
-        border-bottom: 3px solid var(--azul-milagro);
-    }
-</style>
