@@ -2,131 +2,139 @@
 import Layout from "../layouts/Layout.astro";
 
 import Banner from "../components/Banner.astro";
-import CardImagen from "../components/CardImagen.astro";
-import TextoImagen from "../components/TextoImagen.astro";
+import Seccion from "../components/Seccion/Seccion.astro";
 
-import TimeLineItem from "../components/TimeLineItem.astro";
+import CardImagen from "../components/Seccion/CardImagen.astro";
+import TimeLineItem from "../components/Seccion/TimeLineItem.astro";
+import RequisitoItem from "../components/Seccion/RequisitoItem.astro";
 ---
 
 <Layout
     titulo="Ayuda"
     descripcion="Bienvenido a la página web de la Fundación Casa de Jesús."
 >
-    <Banner titulo="Por una vida sin Drogas" imagen="jardin.jpg">
-        La Fundación Casa de Jesús ofrece un programa de rehabilitación para
-        personas con problemas de adicción a las drogas y el alcohol. Nuestro
-        enfoque es integral, abordando las dimensiones físicas, emocionales y
-        espirituales de la dependencia, guiando a los participantes hacia una
-        vida transformada.
-    </Banner>
+    <article>
+        <Banner titulo="Por una vida sin Drogas" imagen="jardin.jpg" tamañoTitulo="text-5xl">
+            La Fundación Casa de Jesús ofrece un programa de rehabilitación para
+            personas con problemas de adicción a las drogas y el alcohol.
+            Nuestro enfoque es integral, abordando las dimensiones físicas,
+            emocionales y espirituales de la dependencia, guiando a los
+            participantes hacia una vida transformada.
+        </Banner>
 
-    <div class="my-10">
-        <TextoImagen
-            titulo="Detalles del tratamiento"
-            imagenURL="voluntario.jpg"
-        >
-            El tratamiento se divide en dos niveles: residencial y reinserción
-            social, ambos con una duración de 1 año. Una vez transcurridos estos
-            dos procesos, la comitiva de cada residencia dictará la resolución
-            de alta terapéutica.
-        </TextoImagen>
-        <TextoImagen
-            titulo="Costos de Tratamiento"
-            imagenURL="voluntario.jpg"
-            invertir="true"
-        >
-            No se cobra ninguna tarifa por el tratamiento. Los residentes solo
-            deben cubrir insumos básicos como productos de aseo personal, gastos
-            comunes y transporte.
-        </TextoImagen>
-        <TextoImagen titulo="Enfoque Cristiano" imagenURL="voluntario.jpg">
-            El tratamiento se basa en principios cristianos, integrando la fe de
-            Cristo como un componente esencial en el proceso de recuperación.
-        </TextoImagen>
-        <TextoImagen
-            titulo="Compromiso Voluntario y Apoyo Familiar "
-            imagenURL="voluntario.jpg"
-            invertir="true"
-        >
-            La participación en el programa es completamente voluntaria,
-            respetando la autonomía de los individuos y fomentando un compromiso
-            genuino con la recuperación, todo bajo las normativas dictadas por
-            cada hogar. La fundación ofrece apoyo terapéutico a los familiares,
-            reconociendo la importancia del respaldo familiar en el proceso de
-            recuperación.
-        </TextoImagen>
-    </div>
-
-    <div class="bg-blue-50 py-20">
-        <div
-            class="max-w-6xl mx-auto max-xl:px-5 text-center font-poppins text-gray-800 font-medium text-lg mb-10"
-        >
-            <h2 class="text-5xl font-bold mb-5">Terapias y Tratamiento</h2>
-            <p>
-                La Fundación Casa de Jesús ofrece un programa de rehabilitación
-                integral que aborda las dimensiones físicas, emocionales y
-                espirituales de la dependencia, guiando a los participantes
-                hacia una vida transformada.
-            </p>
-        </div>
-        <div
-            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-5 sm:px-9 xl:px-0 max-w-7xl mx-auto font-monserrat font-semibold text-sm text-center"
-        >
-            <CardImagen
-                titulo="Enfoque Biopsicosocial"
+        <div class="py-10">
+            <Seccion
+                titulo="Detalles del tratamiento"
                 imagenURL="voluntario.jpg"
             >
-                Abordaje integral que considera las dimensiones biológicas,
-                psicológicas y sociales en el proceso de rehabilitación.
-            </CardImagen>
-
-            <CardImagen titulo="Terapia Psicológica" imagenURL="salida.jpg">
-                A cargo de un psicólogo que proporciona apoyo emocional y
-                terapia individual.
-            </CardImagen>
-
-            <CardImagen
-                titulo="Terapia Especializada y Focalizada"
-                imagenURL="gente.jpg"
-            >
-                Enfoque terapéutico especializado en drogadicción.
-            </CardImagen>
-
-            <CardImagen titulo="Apoyo Espiritual" imagenURL="frente.jpg">
-                Proporcionado por miembros de la iglesia y el pastor, basado en
-                la fe de Cristo como salvador.
-            </CardImagen>
-        </div>
-    </div>
-
-    <!-- <div class="py-20">
-        <div class="bg-white text-gray-800 font-medium text-lg font-poppins">
-            <div class="max-w-6xl mx-auto max-xl:px-5 text-center">
-                <h2 class="text-5xl font-bold mb-5">Titulo</h2>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Aliquam obcaecati et nulla facilis dolore laudantium minus
-                    illo voluptatum earum minima deleniti exercitationem
-                    incidunt vero molestias, fuga tempore corrupti praesentium
-                    explicabo?
+                <p slot="texto">
+                    El tratamiento se divide en dos niveles: residencial y
+                    reinserción social, ambos con una duración de 1 año. Una vez
+                    transcurridos estos dos procesos, la comitiva de cada
+                    residencia dictará la resolución de alta terapéutica.
                 </p>
-            </div>
-        </div>
-    </div> -->
+            </Seccion>
 
-    <div class="py-20">
-        <div class="bg-white text-gray-800 font-medium text-lg font-poppins">
-            <div class="max-w-6xl mx-auto max-xl:px-5">
-                <div class="text-center mb-10">
-                    <h2 class="text-5xl font-bold mb-5">Proceso de Admisión</h2>
-                    <p>
-                        Para ingresar a la Fundación Casa de Jesús, los
-                        interesados deben seguir un proceso de admisión que
-                        incluye una entrevista y el cumplimiento de ciertos
-                        requisitos.
-                    </p>
+            <Seccion
+                titulo="Costos de Tratamiento"
+                imagenURL="voluntario.jpg"
+                invertir="true"
+            >
+                <p slot="texto">
+                    No se cobra ninguna tarifa por el tratamiento. Los
+                    residentes solo deben cubrir insumos básicos como productos
+                    de aseo personal, gastos comunes y transporte.
+                </p>
+            </Seccion>
+
+            <Seccion titulo="Enfoque Cristiano" imagenURL="voluntario.jpg">
+                <p slot="texto">
+                    El tratamiento se basa en principios cristianos, integrando
+                    la fe de Cristo como un componente esencial en el proceso de
+                    recuperación.
+                </p>
+            </Seccion>
+
+            <Seccion
+                titulo="Compromiso Voluntario y Apoyo Familiar"
+                imagenURL="voluntario.jpg"
+                invertir="true"
+            >
+                <p slot="texto">
+                    La participación en el programa es completamente voluntaria,
+                    respetando la autonomía de los individuos y fomentando un
+                    compromiso genuino con la recuperación, todo bajo las
+                    normativas dictadas por cada hogar. La fundación ofrece
+                    apoyo terapéutico a los familiares, reconociendo la
+                    importancia del respaldo familiar en el proceso de
+                    recuperación.
+                </p>
+            </Seccion>
+        </div>
+
+        <div class="bg-blue-50 py-10">
+            <Seccion
+                titulo="Terapias y Tratamiento"
+                vertical="true"
+                extra="true"
+                fondo="bg-blue-50"
+            >
+                <p slot="texto">
+                    La Fundación Casa de Jesús ofrece un programa de
+                    rehabilitación integral que aborda las dimensiones físicas,
+                    emocionales y espirituales de la dependencia, guiando a los
+                    participantes hacia una vida transformada.
+                </p>
+                <div
+                    slot="contenido"
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-5 sm:px-9 xl:px-5 max-w-7xl mx-auto font-monserrat font-semibold text-sm text-center"
+                >
+                    <CardImagen
+                        titulo="Enfoque Biopsicosocial"
+                        imagenURL="voluntario.jpg"
+                    >
+                        Abordaje integral que considera las dimensiones
+                        biológicas, psicológicas y sociales en el proceso de
+                        rehabilitación.
+                    </CardImagen>
+
+                    <CardImagen
+                        titulo="Terapia Psicológica"
+                        imagenURL="salida.jpg"
+                    >
+                        A cargo de un psicólogo que proporciona apoyo emocional
+                        y terapia individual.
+                    </CardImagen>
+
+                    <CardImagen
+                        titulo="Terapia Especializada y Focalizada"
+                        imagenURL="gente.jpg"
+                    >
+                        Enfoque terapéutico especializado en drogadicción.
+                    </CardImagen>
+
+                    <CardImagen
+                        titulo="Apoyo Espiritual"
+                        imagenURL="frente.jpg"
+                    >
+                        Proporcionado por miembros de la iglesia y el pastor,
+                        basado en la fe de Cristo como salvador.
+                    </CardImagen>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-3">
+            </Seccion>
+        </div>
+
+        <div class="py-10">
+            <Seccion titulo="Proceso de Admisión" vertical="true" extra="true">
+                <p slot="texto">
+                    Para ingresar a la Fundación Casa de Jesús, los interesados
+                    deben seguir un proceso de admisión que incluye una
+                    entrevista y el cumplimiento de ciertos requisitos.
+                </p>
+                <div
+                    slot="contenido"
+                    class="grid grid-cols-1 sm:grid-cols-3 max-w-6xl mx-auto"
+                >
                     <TimeLineItem
                         titulo="Llamar al número xxx para una entrevista "
                         numero="1"
@@ -151,110 +159,61 @@ import TimeLineItem from "../components/TimeLineItem.astro";
                         activamente en el proceso de rehabilitación.
                     </TimeLineItem>
                 </div>
-            </div>
+            </Seccion>
         </div>
-    </div>
 
-    <div class="py-20 bg-gray-50">
-        <div class="text-gray-800 font-medium text-lg font-poppins">
-            <div class="max-w-6xl mx-auto max-xl:px-5">
-                <div class="text-center mb-10">
-                    <h2 class="text-5xl font-bold mb-5">
-                        Compromisos del apoderado
-                    </h2>
-                    <p>
-                        La participación activa del apoderado es esencial en el
-                        proceso de rehabilitación de los residentes en la
-                        Fundación Casa de Jesús. Estos son los compromisos
-                        esperados del apoderado.
-                    </p>
-                </div>
-                <div>
+        <div class="bg-gray-100 py-10">
+            <Seccion
+                titulo="Compromisos del apoderado"
+                vertical="true"
+                extra="true"
+                fondo="bg-gray-100"
+            >
+                <p slot="texto">
+                    La participación activa del apoderado es esencial en el
+                    proceso de rehabilitación de los residentes en la Fundación
+                    Casa de Jesús. Estos son los compromisos esperados del
+                    apoderado.
+                </p>
+                <div slot="contenido" class="max-w-6xl mx-auto">
                     <ol
                         class="relative border-s border-gray-200 dark:border-gray-700"
                     >
-                        <li class="ms-4 mb-10">
-                            <div
-                                class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
-                            >
-                            </div>
-                            <h3
-                                class="text-lg font-semibold text-gray-900 dark:text-white"
-                            >
-                                Asistencia a la Reunión de la Iglesia
-                            </h3>
-                            <p
-                                class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400"
-                            >
-                                Compromiso de participar en las reuniones
-                                regulares de la iglesia. La presencia en estos
-                                encuentros fortalece el apoyo espiritual y
-                                comunitario, creando un ambiente propicio para
-                                la recuperación del residente.
-                            </p>
-                        </li>
-                        <li class="ms-4 mb-10">
-                            <div
-                                class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
-                            >
-                            </div>
-                            <h3
-                                class="text-lg font-semibold text-gray-900 dark:text-white"
-                            >
-                                Provisión de Útiles de Aseo Personal
-                            </h3>
-                            <p
-                                class="text-base font-normal text-gray-500 dark:text-gray-400"
-                            >
-                                Suministrar los útiles de aseo personal
-                                necesarios para el residente. Esto incluye
-                                productos básicos como jabón, champú, cepillo de
-                                dientes, pasta dental, entre otros.
-                            </p>
-                        </li>
-                        <li class="ms-4 mb-10">
-                            <div
-                                class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
-                            >
-                            </div>
-                            <h3
-                                class="text-lg font-semibold text-gray-900 dark:text-white"
-                            >
-                                Aporte de Materiales de Estudio
-                            </h3>
-                            <p
-                                class="text-base font-normal text-gray-500 dark:text-gray-400"
-                            >
-                                Proporcionar los materiales de estudio
-                                esenciales para el residente. Esto implica
-                                cuadernos, lápices, cartulinas y cualquier otro
-                                material necesario para actividades terapéuticas
-                                y de desarrollo personal.
-                            </p>
-                        </li>
-                        <li class="ms-4">
-                            <div
-                                class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
-                            >
-                            </div>
-                            <h3
-                                class="text-lg font-semibold text-gray-900 dark:text-white"
-                            >
-                                Asistencia a la Reunión de la Iglesia
-                            </h3>
-                            <p
-                                class="text-base font-normal text-gray-500 dark:text-gray-400"
-                            >
-                                Compromiso de participar en las reuniones
-                                regulares de la iglesia. La presencia en estos
-                                encuentros fortalece el apoyo espiritual y
-                                comunitario, creando un ambiente propicio para
-                                la recuperación del residente.
-                            </p>
-                        </li>
+                        <RequisitoItem
+                            titulo="Asistencia a la Reunión de la Iglesia"
+                        >
+                            Compromiso de participar en las reuniones regulares
+                            de la iglesia. La presencia en estos encuentros
+                            fortalece el apoyo espiritual y comunitario, creando
+                            un ambiente propicio para la recuperación del
+                            residente.
+                        </RequisitoItem>
+                        <RequisitoItem
+                            titulo="Provisión de Útiles de Aseo Personal"
+                        >
+                            Suministrar los útiles de aseo personal necesarios
+                            para el residente. Esto incluye productos básicos
+                            como jabón, champú, cepillo de dientes, pasta
+                            dental, entre otros.
+                        </RequisitoItem>
+                        <RequisitoItem titulo="Aporte de Materiales de Estudio">
+                            Proporcionar los materiales de estudio esenciales
+                            para el residente. Esto implica cuadernos, lápices,
+                            cartulinas y cualquier otro material necesario para
+                            actividades terapéuticas y de desarrollo personal.
+                        </RequisitoItem>
+                        <RequisitoItem
+                            titulo="Asistencia a la Reunión de la Iglesia"
+                        >
+                            Compromiso de participar en las reuniones regulares
+                            de la iglesia. La presencia en estos encuentros
+                            fortalece el apoyo espiritual y comunitario, creando
+                            un ambiente propicio para la recuperación del
+                            residente.
+                        </RequisitoItem>
                     </ol>
                 </div>
-            </div>
+            </Seccion>
         </div>
-    </div>
+    </article>
 </Layout>

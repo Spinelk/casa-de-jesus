@@ -1,7 +1,7 @@
 ---
-import HeaderLink from "./HeaderLink.astro";
+import NavbarLink from "./NavbarLink.astro";
 
-import Logotipo from "./Logotipo.astro";
+import Logotipo from "../Logotipo.astro";
 import IconoInstagram from "./IconoInstagram.astro";
 import IconoFacebook from "./IconoFacebook.astro";
 
@@ -156,13 +156,14 @@ enVivo = esDiaYHoraEspecifica(
         </button>
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul
-                class="bg-white flex gap-2 max-md:flex-col max-md:absolute max-md:top-16 max-md:left-0 max-md:w-full z-40"
+                class="bg-white flex max-md:flex-col max-md:absolute max-md:top-16 max-md:left-0 max-md:w-full z-40"
             >
-                <HeaderLink href="/">Inicio</HeaderLink>
-                <HeaderLink href="/nosotros">Sobre Nosotros</HeaderLink>
-                <HeaderLink href="/ayuda">¿Necesitas Ayuda?</HeaderLink>
-                <HeaderLink href="/contacto">Contacto</HeaderLink>
-                <HeaderLink href="/galeria">Galeria</HeaderLink>
+                <NavbarLink href="/">Inicio</NavbarLink>
+                <!-- <NavbarLink href="/nosotros">Sobre Nosotros</NavbarLink> -->
+                <NavbarLink href="/ayuda">¿Necesitas Ayuda?</NavbarLink>
+                <NavbarLink href="/#">Informate</NavbarLink>
+                <NavbarLink href="/#">Galeria</NavbarLink>
+                <NavbarLink href="/contacto">Contacto</NavbarLink>
             </ul>
         </div>
     </div>
