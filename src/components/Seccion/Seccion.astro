@@ -39,7 +39,13 @@ const tamaño = vertical
             <div
                 class={`flex flex-col justify-center ${textoCentrado} ${ordenTexto} ${anchoMaximoVertical}`}
             >
-                <h2 class={`${tamañoTitulo} font-bold mb-5`}>{titulo}</h2>
+                {
+                    titulo && (
+                        <h2 class={`${tamañoTitulo} font-bold mb-5`}>
+                            {titulo}
+                        </h2>
+                    )
+                }
                 <slot name="texto" />
             </div>
 
