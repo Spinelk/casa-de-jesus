@@ -2,8 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 
 import Banner from "../components/Banner.astro";
-import TextoImagen from "../components/TextoImagen.astro";
-import TextoImagenVertical from "../components/TextoImagenVertical.astro";
+import Seccion from "../components/Seccion.astro";
 ---
 
 <Layout
@@ -19,39 +18,51 @@ import TextoImagenVertical from "../components/TextoImagenVertical.astro";
     </Banner>
 
     <div class="my-10">
-        <TextoImagen titulo="Historia" imagenURL="voluntario.jpg">
-            La Fundación Casa de Jesús abrió sus puertas el 3 de noviembre de
-            2008, cuando dos visionarios, guiados por su fe cristiana y una
-            profunda compasión por los demás, decidieron unir fuerzas para
-            abordar la creciente problemática de la dependencia a las drogas y
-            el alcohol. La fundación nació con la misión de proporcionar ayuda
-            integral a aquellos que se encontraban inmersos en el flagelo de las
-            adicciones y carecían de recursos para una rehabilitación completa.
-        </TextoImagen>
-        <TextoImagen titulo="Misión" imagenURL="voluntario.jpg" invertir="true">
-            Ofrecer un camino de recuperación basado en principios cristianos,
-            proporcionando apoyo espiritual, terapéutico, psicológico y
-            biopsicosocial a aquellos que luchan contra la dependencia.
-        </TextoImagen>
-        <TextoImagen titulo="Visión" imagenURL="voluntario.jpg">
-            Ser un faro de esperanza y transformación, guiando a individuos
-            hacia la libertad y la restauración, a través del poder sanador de
-            la fe cristiana.
-        </TextoImagen>
+        <Seccion titulo="Historia" imagenURL="voluntario.jpg">
+            <p slot="texto">
+                La Fundación Casa de Jesús abrió sus puertas el 3 de noviembre
+                de 2008, cuando dos visionarios, guiados por su fe cristiana y
+                una profunda compasión por los demás, decidieron unir fuerzas
+                para abordar la creciente problemática de la dependencia a las
+                drogas y el alcohol. La fundación nació con la misión de
+                proporcionar ayuda integral a aquellos que se encontraban
+                inmersos en el flagelo de las adicciones y carecían de recursos
+                para una rehabilitación completa.
+            </p>
+        </Seccion>
+        <Seccion titulo="Misión" imagenURL="voluntario.jpg" invertir="true">
+            <p slot="texto">
+                Ofrecer un camino de recuperación basado en principios
+                cristianos, proporcionando apoyo espiritual, terapéutico,
+                psicológico y biopsicosocial a aquellos que luchan contra la
+                dependencia.
+            </p>
+        </Seccion>
+        <Seccion titulo="Visión" imagenURL="voluntario.jpg">
+            <p slot="texto">
+                Ser un faro de esperanza y transformación, guiando a individuos
+                hacia la libertad y la restauración, a través del poder sanador
+                de la fe cristiana.
+            </p>
+        </Seccion>
     </div>
 
     <div class="my-10">
-        <TextoImagenVertical
+        <Seccion
             titulo="Carácter sin fines de lucro"
             imagenURL="voluntario.jpg"
+            vertical="true"
         >
-            La Fundación Casa de Jesús abrió sus puertas el 3 de noviembre de
-            2008, cuando dos visionarios, guiados por su fe cristiana y una
-            profunda compasión por los demás, decidieron unir fuerzas para
-            abordar la creciente problemática de la dependencia a las drogas y
-            el alcohol. La fundación nació con la misión de proporcionar ayuda
-            integral a aquellos que se encontraban inmersos en el flagelo de las
-            adicciones y carecían de recursos para una rehabilitación completa.
-        </TextoImagenVertical>
+            <p slot="texto">
+                La Fundación Casa de Jesús abrió sus puertas el 3 de noviembre
+                de 2008, cuando dos visionarios, guiados por su fe cristiana y
+                una profunda compasión por los demás, decidieron unir fuerzas
+                para abordar la creciente problemática de la dependencia a las
+                drogas y el alcohol. La fundación nació con la misión de
+                proporcionar ayuda integral a aquellos que se encontraban
+                inmersos en el flagelo de las adicciones y carecían de recursos
+                para una rehabilitación completa.
+            </p>
+        </Seccion>
     </div>
 </Layout>
