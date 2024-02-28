@@ -2,6 +2,10 @@
 import NavbarLink from "./NavbarLink.astro";
 
 import Logotipo from "../Logotipo.astro";
+
+import { ENLACE_FACEBOOK } from "../../../consts";
+import { ENLACE_INSTAGRAM } from "../../../consts";
+
 import IconoInstagram from "./IconoInstagram.astro";
 import IconoFacebook from "./IconoFacebook.astro";
 
@@ -113,15 +117,11 @@ enVivo = esDiaYHoraEspecifica(
             >
                 <ul class="flex flex-row gap-4">
                     <li>
-                        <IconoFacebook
-                            href="https://web.facebook.com/fundacioneiglesiacasadejesus/?_rdc=1&_rdr"
-                        />
+                        <IconoFacebook href={ENLACE_FACEBOOK} />
                     </li>
 
                     <li>
-                        <IconoInstagram
-                            href="https://www.instagram.com/casadejesusoficial/"
-                        />
+                        <IconoInstagram href={ENLACE_INSTAGRAM} />
                     </li>
                 </ul>
             </div>
@@ -162,8 +162,18 @@ enVivo = esDiaYHoraEspecifica(
                 <!-- <NavbarLink href="/nosotros">Sobre Nosotros</NavbarLink> -->
                 <NavbarLink href="/ayuda">¿Necesitas Ayuda?</NavbarLink>
                 <NavbarLink href="/#">Informate</NavbarLink>
-                <NavbarLink href="/#">Galeria</NavbarLink>
+                <!-- <NavbarLink href="/#">Galeria</NavbarLink> -->
                 <NavbarLink href="/contacto">Contacto</NavbarLink>
+                <div class="md:hidden">
+                    <NavbarLink href={ENLACE_FACEBOOK} target="_blank">
+                        Facebook
+                    </NavbarLink>
+                </div>
+                <div class="md:hidden">
+                    <NavbarLink href={ENLACE_INSTAGRAM} target="_blank">
+                        Instagram
+                    </NavbarLink>
+                </div>
             </ul>
         </div>
     </div>
