@@ -3,70 +3,210 @@ import Layout from "../layouts/Layout.astro";
 
 import Banner from "../components/Banner.astro";
 import Seccion from "../components/Seccion/Seccion.astro";
+
+import MapaItem from "../components/Seccion/MapaItem.astro";
+
+import { ENLACE_FACEBOOK } from "../consts";
+import { ENLACE_INSTAGRAM } from "../consts";
 ---
 
 <Layout titulo="Contacto" descripcion="Contacta con nosotros">
     <article>
-        <Banner titulo="Contacto" imagen="Contacto.jpg" alt="Contacto" tamañoTitulo="text-5xl" header="true">
-            En nuestra casa de Talagante o a través de nuestras redes sociales:
-            <ul>
-                <li>Correo: ctcasadejesus@gmail.com</li>
-                <li>Telefono: (2) 2683 2719</li>
-                <li>
-                    Facebook: <a
-                        href="https://web.facebook.com/fundacioneiglesiacasadejesus/?_rdc=1&_rdr"
-                        target="_blank"
-                        class="hover:underline"
-                        >Fundación e Iglesia "Casa de Jesús"</a
-                    >
-                </li>
-                <li>
-                    Instagram: <a
-                        href="https://www.instagram.com/casadejesusoficial/"
-                        target="_blank"
-                        class="hover:underline">@casadejesusoficial</a
-                    >
-                </li>
-            </ul>
+        <Banner
+            titulo="Contacto"
+            imagen="Contacto.jpg"
+            alt="Contacto"
+            tamañoTitulo="text-5xl"
+            header="true"
+        >
+            Si buscas información sobre nuestras sedes o necesitas contactarnos
+            , aquí encontrarás toda la información que necesitas. También puedes
+            visitarnos en nuestras sedes en Santiago, la Región del Bio Bio y la
+            Región de Coquimbo.
         </Banner>
 
-        <div class="py-10">
+        <div class="">
             <Seccion
-                titulo="Casa de Jesús Talagante"
-                mapaURL="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.2651064573997!2d-70.88782262430075!3d-33.65029207331107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662e17364112a05%3A0x4a847c9e9a1ef290!2sCam.%20El%20Oliveto%20200%2C%20Talagante%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1708137190908!5m2!1ses!2scl"
+                titulo="Información de Contacto"
+                vertical="true"
+                extra="true"
             >
                 <p slot="texto">
-                    Ubicación La casa de Jesús junto con la Iglesia y la casa de
-                    adultos mayores de Talagante.
-                    <span class="block font-semibold text-gray-700 text-xl mt-1"
-                        >Oliveto 200, Talagante. Santiago</span
-                    >
+                    Si necesitas contactarnos, puedes hacerlo a través de los
+                    siguientes medios.
                 </p>
+                <div
+                    slot="extra"
+                    class="max-w-5xl mx-auto text-start grid sm:grid-cols-2 gap-6"
+                >
+                    <div class="grid grid-cols-8">
+                        <div>
+                            <div
+                                class="bg-green-400 rounded-full w-12 aspect-square flex items-center justify-center"
+                            >
+                                <svg
+                                    class="w-6 h-6 text-white"
+                                    aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M8 4a2.6 2.6 0 0 0-2 .9 6.2 6.2 0 0 0-1.8 6 12 12 0 0 0 3.4 5.5 12 12 0 0 0 5.6 3.4 6.2 6.2 0 0 0 6.6-2.7 2.6 2.6 0 0 0-.7-3L18 12.9a2.7 2.7 0 0 0-3.8 0l-.6.6a.8.8 0 0 1-1.1 0l-1.9-1.8a.8.8 0 0 1 0-1.2l.6-.6a2.7 2.7 0 0 0 0-3.8L10 4.9A2.6 2.6 0 0 0 8 4Z"
+                                    ></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-span-6 flex items-center ml-4">
+                            (2) 2 683 2719
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-8">
+                        <div>
+                            <div
+                                class="bg-blue-400 rounded-full w-12 aspect-square flex items-center justify-center"
+                            >
+                                <svg
+                                    class="w-6 h-6 text-white"
+                                    aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M12 2c.4 0 .8.3 1 .6l7 18a1 1 0 0 1-1.4 1.3L13 19.5V13a1 1 0 1 0-2 0v6.5L5.4 22A1 1 0 0 1 4 20.6l7-18a1 1 0 0 1 1-.6Z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-span-6 flex items-center ml-4">
+                            ctcasadejesus@gmail.com
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-8">
+                        <div>
+                            <div
+                                class="bg-blue-700 rounded-full w-12 aspect-square flex items-center justify-center"
+                            >
+                                <span class="font-bold text-white">F</span>
+                            </div>
+                        </div>
+                        <div class="col-span-6 flex items-center ml-4">
+                            <a
+                                href={ENLACE_FACEBOOK}
+                                target="_blank"
+                                class="hover:underline"
+                                >Fundación e Iglesia "Casa de Jesús"</a
+                            >
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-8">
+                        <div>
+                            <div
+                                class="bg-pink-500 rounded-full w-12 aspect-square flex items-center justify-center"
+                            >
+                                <svg
+                                    class="w-6 h-6 text-white"
+                                    aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M7.5 4.6A2 2 0 0 1 8.9 4h6.2c.5 0 1 .2 1.4.6L17.9 6H19a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8c0-1.1.9-2 2-2h1l1.5-1.4ZM10 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm2-4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-span-6 flex items-center ml-4">
+                            <a
+                                href={ENLACE_INSTAGRAM}
+                                target="_blank"
+                                class="hover:underline">@casadejesusoficial</a
+                            >
+                        </div>
+                    </div>
+                </div>
             </Seccion>
 
-            <Seccion
-                titulo="Región del Bio Bio"
-                invertir="true"
-                mapaURL="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.2651064573997!2d-70.88782262430075!3d-33.65029207331107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662e17364112a05%3A0x4a847c9e9a1ef290!2sCam.%20El%20Oliveto%20200%2C%20Talagante%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1708137190908!5m2!1ses!2scl"
-            >
-                <p slot="texto">
-                    <span class="block font-semibold text-gray-700 text-xl mt-1"
-                        >Paradero la Higuerilla kilómetro 6 ½, camino a Yumbel</span
+            <div class="py-10">
+                <Seccion
+                    titulo="Casa de Jesús Talagante"
+                    mapaURL="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.2651064573997!2d-70.88782262430075!3d-33.65029207331107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662e17364112a05%3A0x4a847c9e9a1ef290!2sCam.%20El%20Oliveto%20200%2C%20Talagante%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1708137190908!5m2!1ses!2scl"
+                >
+                    <MapaItem
+                        slot="texto"
+                        direccion="Oliveto 200, Talagante. Santiago"
                     >
-                </p>
-            </Seccion>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Tenetur fuga alias laudantium ipsa facere at distinctio.
+                    </MapaItem>
+                </Seccion>
 
-            <Seccion
-                titulo="Región de Coquimbo"
-                mapaURL="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.2651064573997!2d-70.88782262430075!3d-33.65029207331107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662e17364112a05%3A0x4a847c9e9a1ef290!2sCam.%20El%20Oliveto%20200%2C%20Talagante%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1708137190908!5m2!1ses!2scl"
-            >
-                <p slot="texto">
-                    <span class="block font-semibold text-gray-700 text-xl mt-1"
-                        >Panamericana norte, km. 492, parcela 16, El Arrayán, La
-                        Serena</span
+                <Seccion
+                    titulo="Hogar de Hombres"
+                    invertir="true"
+                    fondo="bg-gray-100"
+                    mapaURL="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.2651064573997!2d-70.88782262430075!3d-33.65029207331107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662e17364112a05%3A0x4a847c9e9a1ef290!2sCam.%20El%20Oliveto%20200%2C%20Talagante%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1708137190908!5m2!1ses!2scl"
+                >
+                    <MapaItem
+                        slot="texto"
+                        direccion="Camino San José Parcela Numero 12 Monte las Mercedes, Isla de Maipo. Santiago"
                     >
-                </p>
-            </Seccion>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Velit, incidunt mollitia libero aliquid ipsa eos
+                        aperiam beatae.
+                    </MapaItem>
+                </Seccion>
+
+                <Seccion
+                    titulo="Hogar de Mujeres"
+                    mapaURL="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.2651064573997!2d-70.88782262430075!3d-33.65029207331107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662e17364112a05%3A0x4a847c9e9a1ef290!2sCam.%20El%20Oliveto%20200%2C%20Talagante%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1708137190908!5m2!1ses!2scl"
+                >
+                    <MapaItem
+                        slot="texto"
+                        direccion="San Andres 4465, Cerrillos. Santiago"
+                        telefono="56 2 683 2719"
+                    >
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptatibus quasi unde at soluta culpa adipisci.
+                    </MapaItem>
+                </Seccion>
+
+                <Seccion
+                    titulo="Región del Bio Bio"
+                    invertir="true"
+                    fondo="bg-blue-50"
+                    mapaURL="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.2651064573997!2d-70.88782262430075!3d-33.65029207331107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662e17364112a05%3A0x4a847c9e9a1ef290!2sCam.%20El%20Oliveto%20200%2C%20Talagante%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1708137190908!5m2!1ses!2scl"
+                >
+                    <MapaItem
+                        slot="texto"
+                        direccion="Paradero la Higuerilla kilómetro 6 ½, camino a Yumbel"
+                        telefono="569 4143 4988"
+                    >
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Provident, tempore eius eveniet sequi error eaque ad
+                        minus.
+                    </MapaItem>
+                </Seccion>
+
+                <Seccion
+                    titulo="Región de Coquimbo"
+                    mapaURL="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.2651064573997!2d-70.88782262430075!3d-33.65029207331107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662e17364112a05%3A0x4a847c9e9a1ef290!2sCam.%20El%20Oliveto%20200%2C%20Talagante%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1708137190908!5m2!1ses!2scl"
+                >
+                    <MapaItem
+                        slot="texto"
+                        direccion="Panamericana norte, km. 492, parcela 16, El Arrayán. La Serena"
+                        telefono="569 4750 8507"
+                    >
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Maiores, commodi exercitationem distinctio quasi
+                        veritatis.
+                    </MapaItem>
+                </Seccion>
+            </div>
         </div>
     </article>
 </Layout>
