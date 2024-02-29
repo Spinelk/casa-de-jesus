@@ -14,7 +14,7 @@ import RequisitoItem from "../components/Seccion/RequisitoItem.astro";
     descripcion="Bienvenido a la página web de la Fundación Casa de Jesús."
 >
     <article>
-        <Banner titulo="Por una vida sin Drogas" imagen="jardin.jpg" tamañoTitulo="text-5xl">
+        <Banner titulo="Por una vida sin Drogas" imagen="jardin.jpg" tamañoTitulo="text-5xl" header="true">
             La Fundación Casa de Jesús ofrece un programa de rehabilitación para
             personas con problemas de adicción a las drogas y el alcohol.
             Nuestro enfoque es integral, abordando las dimensiones físicas,
@@ -86,7 +86,7 @@ import RequisitoItem from "../components/Seccion/RequisitoItem.astro";
                     participantes hacia una vida transformada.
                 </p>
                 <div
-                    slot="contenido"
+                    slot="extra"
                     class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-5 sm:px-9 xl:px-5 max-w-7xl mx-auto font-monserrat font-semibold text-sm text-center"
                 >
                     <CardImagen
@@ -131,8 +131,8 @@ import RequisitoItem from "../components/Seccion/RequisitoItem.astro";
                     deben seguir un proceso de admisión que incluye una
                     entrevista y el cumplimiento de ciertos requisitos.
                 </p>
-                <div
-                    slot="contenido"
+                <ol
+                    slot="extra"
                     class="grid grid-cols-1 sm:grid-cols-3 max-w-6xl mx-auto"
                 >
                     <TimeLineItem
@@ -158,7 +158,7 @@ import RequisitoItem from "../components/Seccion/RequisitoItem.astro";
                         contar con un apoderado que se comprometa a participar
                         activamente en el proceso de rehabilitación.
                     </TimeLineItem>
-                </div>
+                </ol>
             </Seccion>
         </div>
 
@@ -175,8 +175,8 @@ import RequisitoItem from "../components/Seccion/RequisitoItem.astro";
                     Casa de Jesús. Estos son los compromisos esperados del
                     apoderado.
                 </p>
-                <div slot="contenido" class="max-w-6xl mx-auto">
-                    <ol
+                <div slot="extra" class="max-w-6xl mx-auto">
+                    <ul
                         class="relative border-s border-gray-200 dark:border-gray-700"
                     >
                         <RequisitoItem
@@ -211,7 +211,7 @@ import RequisitoItem from "../components/Seccion/RequisitoItem.astro";
                             un ambiente propicio para la recuperación del
                             residente.
                         </RequisitoItem>
-                    </ol>
+                    </ul>
                 </div>
             </Seccion>
         </div>

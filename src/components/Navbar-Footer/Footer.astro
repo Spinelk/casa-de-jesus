@@ -1,6 +1,9 @@
 ---
 import Logotipo from "../Navbar-Footer/Logotipo.astro";
 
+import { ENLACE_FACEBOOK } from "../../consts";
+import { ENLACE_INSTAGRAM } from "../../consts";
+
 const today = new Date();
 ---
 
@@ -14,7 +17,7 @@ const today = new Date();
                 class="font-poppins max-sm:mx-auto grid grid-cols-2 gap-8 sm:gap-0 sm:grid-cols-4 text-sm font-medium text-gray-500 dark:text-gray-400"
             >
                 <li class="grid justify-center items-center">
-                    <a href="/nosotros" class="hover:underline"
+                    <a href="/" class="hover:underline"
                         >Sobre Nosotros</a
                     >
                 </li>
@@ -23,14 +26,14 @@ const today = new Date();
                 </li>
                 <li class="grid justify-center items-center">
                     <a
-                        href="https://web.facebook.com/fundacioneiglesiacasadejesus/?_rdc=1&_rdr"
+                        href={ENLACE_FACEBOOK}
                         class="hover:underline"
                         target="_blank">Facebook</a
                     >
                 </li>
                 <li class="grid justify-center items-center">
                     <a
-                        href="https://www.instagram.com/casadejesusoficial/"
+                        href={ENLACE_INSTAGRAM}
                         class="hover:underline"
                         target="_blank">Instagram</a
                     >
