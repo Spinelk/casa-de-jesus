@@ -62,10 +62,27 @@ enVivo = esDiaYHoraEspecifica(
 );
 ---
 
+<script>
+    const primerDiv = document.getElementById("primerDiv");
+
+    window.addEventListener("scroll", () => {
+        // Verifica la posición de scroll
+        if (window.scrollY > 0) {
+            if (primerDiv) {
+                primerDiv.style.display = "none";
+            }
+        } else {
+            if (primerDiv) {
+                primerDiv.style.display = "block";
+            }
+        }
+    });
+</script>
+
 <nav
     class="bg-white dark:bg-gray-900 fixed w-full z-50 top-0 start-0 font-monserrat shadow-md"
 >
-    <div class="border-b-[1px] border-gray hidden md:block">
+    <div id="primerDiv" class="border-b-[1px] border-gray hidden md:block">
         <div class="max-w-5xl grid grid-cols-4 mx-auto">
             <div
                 class="border-s-[1px] border-gray p-2 flex justify-center items-center text-sm"
