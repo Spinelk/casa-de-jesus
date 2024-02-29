@@ -1,5 +1,10 @@
 ---
-import HeaderLink from "./HeaderLink.astro";
+import NavbarLink from "./NavbarLink.astro";
+
+import Logotipo from "../Logotipo.astro";
+
+import { ENLACE_FACEBOOK } from "../../../consts";
+import { ENLACE_INSTAGRAM } from "../../../consts";
 
 import IconoInstagram from "./IconoInstagram.astro";
 import IconoFacebook from "./IconoFacebook.astro";
@@ -112,15 +117,11 @@ enVivo = esDiaYHoraEspecifica(
             >
                 <ul class="flex flex-row gap-4">
                     <li>
-                        <IconoFacebook
-                            href="https://web.facebook.com/fundacioneiglesiacasadejesus/?_rdc=1&_rdr"
-                        />
+                        <IconoFacebook href={ENLACE_FACEBOOK} />
                     </li>
 
                     <li>
-                        <IconoInstagram
-                            href="https://www.instagram.com/casadejesusoficial/"
-                        />
+                        <IconoInstagram href={ENLACE_INSTAGRAM} />
                     </li>
                 </ul>
             </div>
@@ -129,13 +130,7 @@ enVivo = esDiaYHoraEspecifica(
     <div
         class="max-w-6xl flex flex-wrap items-center justify-between mx-auto max-xl:px-3 py-3"
     >
-        <a class="flex items-center space-x-3 rtl:space-x-reverse" href="/">
-            <img src="logo.png" class="h-10 md:h-16" alt="Logo Fundación" />
-            <span
-                class="font-cinzel self-center text-2xl font-bold whitespace-nowrap text-azul-milagro dark:text-white hidden lg:inline"
-                >Fundación<span class="block -mt-2">Casa de Jesús</span></span
-            >
-        </a>
+        <Logotipo retractil="true" />
         <button
             data-collapse-toggle="navbar-default"
             type="button"
@@ -161,13 +156,24 @@ enVivo = esDiaYHoraEspecifica(
         </button>
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul
-                class="bg-white flex gap-2 max-md:flex-col max-md:absolute max-md:top-16 max-md:left-0 max-md:w-full z-40"
+                class="bg-white flex max-md:flex-col max-md:absolute max-md:top-16 max-md:left-0 max-md:w-full z-40"
             >
-                <HeaderLink href="/">Inicio</HeaderLink>
-                <HeaderLink href="/nosotros">Sobre Nosotros</HeaderLink>
-                <HeaderLink href="/ayuda">¿Necesitas Ayuda?</HeaderLink>
-                <HeaderLink href="/contacto">Contacto</HeaderLink>
-                <HeaderLink href="/galeria">Galeria</HeaderLink>
+                <NavbarLink href="/">Inicio</NavbarLink>
+                <!-- <NavbarLink href="/nosotros">Sobre Nosotros</NavbarLink> -->
+                <NavbarLink href="/ayuda">¿Necesitas Ayuda?</NavbarLink>
+                <NavbarLink href="/#">Informate</NavbarLink>
+                <!-- <NavbarLink href="/#">Galeria</NavbarLink> -->
+                <NavbarLink href="/contacto">Contacto</NavbarLink>
+                <div class="md:hidden">
+                    <NavbarLink href={ENLACE_FACEBOOK} target="_blank">
+                        Facebook
+                    </NavbarLink>
+                </div>
+                <div class="md:hidden">
+                    <NavbarLink href={ENLACE_INSTAGRAM} target="_blank">
+                        Instagram
+                    </NavbarLink>
+                </div>
             </ul>
         </div>
     </div>

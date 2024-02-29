@@ -1,25 +1,38 @@
 ---
-const { titulo, imagen, alt } = Astro.props;
+const {
+    titulo,
+    imagen,
+    header=false,
+    tamañoTitulo = "text-4xl",
+    tamañoTexto = "text-lg",
+} = Astro.props;
+
+const tituloClases = tamañoTitulo;
+const textoClases = tamañoTexto;
+
+const imagenURL = 'url("' + imagen + '")';
 ---
 
-<div
-    class="w-full aspect-[5/6] sm:aspect-[2/1] md:aspect-[5/2] lg:aspect-[4/1] relative"
+<style define:vars={{ imagenURL }}>
+    section::before {
+        background-image: var(--imagenURL);
+    }
+</style>
+
+<section
+    class="w-full aspect-[2/3] sm:aspect-[2/1] md:aspect-[5/2] lg:aspect-[4/1] relative before:brightness-50 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-no-repeat before:bg-center before:bg-cover"
 >
-    <img
-        src={imagen}
-        class="w-full h-full object-cover absolute brightness-[55%]"
-        alt={alt}
-    />
     <div
-        class="absolute flex flex-col justify-center items-center w-full h-full font-poppins font-medium text-lg sm:text-xl text-white"
+        class={`${textoClases} relative flex flex-col justify-center items-center w-full h-full font-poppins font-medium text-white`}
     >
         <div
             class="flex flex-col justify-center items-center max-w-5xl px-6 text-center"
         >
-            <h1 class="text-4xl sm:text-6xl font-bold mb-5">{titulo}</h1>
+            { header && (<h1 class={`${tituloClases} font-bold mb-5`}>{titulo}</h1>)}
+            { !header && (<h2 class={`${tituloClases} font-bold mb-5`}>{titulo}</h2>)}
             <p>
                 <slot />
             </p>
         </div>
     </div>
-</div>
+</section>

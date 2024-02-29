@@ -1,7 +1,7 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import BaseHead from "./BaseHead.astro";
+import Navbar from "../components/Navbar-Footer/Navbar/Navbar.astro";
+import Footer from "../components/Navbar-Footer/Footer.astro";
 
 const { titulo, descripcion } = Astro.props;
 ---
@@ -12,7 +12,7 @@ const { titulo, descripcion } = Astro.props;
         <BaseHead titulo={titulo} descripcion={descripcion} />
     </head>
     <body>
-        <Header />
+        <Navbar />
         <main class="mt-16 md:mt-36">
             <slot />
         </main>

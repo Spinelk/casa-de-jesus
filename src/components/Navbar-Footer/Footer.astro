@@ -1,4 +1,9 @@
 ---
+import Logotipo from "../Navbar-Footer/Logotipo.astro";
+
+import { ENLACE_FACEBOOK } from "../../consts";
+import { ENLACE_INSTAGRAM } from "../../consts";
+
 const today = new Date();
 ---
 
@@ -6,27 +11,13 @@ const today = new Date();
     <div class="w-full max-w-6xl mx-auto max-xl:px-3 py-4 md:py-8">
         <div class="grid sm:grid-cols-2 max-sm:gap-5">
             <div class="max-sm:mx-auto">
-                <a
-                    class="flex items-center space-x-3 rtl:space-x-reverse"
-                    href="/"
-                >
-                    <img
-                        src="logo.png"
-                        class="h-10 md:h-16"
-                        alt="Logo Fundación"
-                    />
-                    <span
-                        class="font-cinzel self-center text-2xl font-bold whitespace-nowrap text-azul-milagro dark:text-white"
-                        >Fundación<span class="block -mt-2">Casa de Jesús</span
-                        ></span
-                    >
-                </a>
+                <Logotipo />
             </div>
             <ul
                 class="font-poppins max-sm:mx-auto grid grid-cols-2 gap-8 sm:gap-0 sm:grid-cols-4 text-sm font-medium text-gray-500 dark:text-gray-400"
             >
                 <li class="grid justify-center items-center">
-                    <a href="/nosotros" class="hover:underline"
+                    <a href="/" class="hover:underline"
                         >Sobre Nosotros</a
                     >
                 </li>
@@ -35,14 +26,14 @@ const today = new Date();
                 </li>
                 <li class="grid justify-center items-center">
                     <a
-                        href="https://web.facebook.com/fundacioneiglesiacasadejesus/?_rdc=1&_rdr"
+                        href={ENLACE_FACEBOOK}
                         class="hover:underline"
                         target="_blank">Facebook</a
                     >
                 </li>
                 <li class="grid justify-center items-center">
                     <a
-                        href="https://www.instagram.com/casadejesusoficial/"
+                        href={ENLACE_INSTAGRAM}
                         class="hover:underline"
                         target="_blank">Instagram</a
                     >
