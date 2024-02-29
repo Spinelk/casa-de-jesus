@@ -62,10 +62,27 @@ enVivo = esDiaYHoraEspecifica(
 );
 ---
 
+<script>
+    const primerDiv = document.getElementById("primerDiv");
+
+    window.addEventListener("scroll", () => {
+        // Verifica la posición de scroll
+        if (window.scrollY > 0) {
+            if (primerDiv) {
+                primerDiv.style.display = "none";
+            }
+        } else {
+            if (primerDiv) {
+                primerDiv.style.display = "block";
+            }
+        }
+    });
+</script>
+
 <nav
     class="bg-white dark:bg-gray-900 fixed w-full z-50 top-0 start-0 font-monserrat shadow-md"
 >
-    <div class="border-b-[1px] border-gray hidden md:block">
+    <div id="primerDiv" class="border-b-[1px] border-gray hidden md:block">
         <div class="max-w-5xl grid grid-cols-4 mx-auto">
             <div
                 class="border-s-[1px] border-gray p-2 flex justify-center items-center text-sm"
@@ -158,11 +175,11 @@ enVivo = esDiaYHoraEspecifica(
             <ul
                 class="bg-white flex max-md:flex-col max-md:absolute max-md:top-16 max-md:left-0 max-md:w-full z-40"
             >
-                <NavbarLink href="/">Inicio</NavbarLink>
-                <!-- <NavbarLink href="/nosotros">Sobre Nosotros</NavbarLink> -->
+                <NavbarLink href="/">Casa de Jesús</NavbarLink>
                 <NavbarLink href="/ayuda">¿Necesitas Ayuda?</NavbarLink>
-                <NavbarLink href="/#">Informate</NavbarLink>
-                <!-- <NavbarLink href="/#">Galeria</NavbarLink> -->
+                <NavbarLink href="/esperanza">
+                    Esperanza y Renacimiento
+                </NavbarLink>
                 <NavbarLink href="/contacto">Contacto</NavbarLink>
                 <div class="md:hidden">
                     <NavbarLink href={ENLACE_FACEBOOK} target="_blank">
