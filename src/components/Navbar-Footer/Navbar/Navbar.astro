@@ -83,7 +83,7 @@ enVivo = esDiaYHoraEspecifica(
 <nav
     class="bg-white dark:bg-gray-900 fixed w-full z-50 top-0 start-0 font-monserrat shadow-md"
 >
-    <div id="primerDiv" class="border-b-[1px] border-gray hidden md:block">
+    <div id="primerDiv" class="border-b-[1px] border-gray hidden lg:block">
         <div class="max-w-5xl grid grid-cols-4 mx-auto">
             <div
                 class="border-s-[1px] border-gray p-2 flex justify-center items-center text-sm"
@@ -152,7 +152,7 @@ enVivo = esDiaYHoraEspecifica(
         <button
             data-collapse-toggle="navbar-default"
             type="button"
-            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-800 dar:text-white rounded-lg md:hidden focus:outline-none"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-800 dar:text-white rounded-lg lg:hidden focus:outline-none"
             aria-controls="navbar-default"
             aria-expanded="false"
         >
@@ -172,9 +172,9 @@ enVivo = esDiaYHoraEspecifica(
                     d="M1 1h15M1 7h15M1 13h15"></path>
             </svg>
         </button>
-        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <div class="hidden w-full lg:block lg:w-auto" id="navbar-default">
             <ul
-                class="bg-white flex max-md:flex-col max-md:absolute max-md:top-16 max-md:left-0 max-md:w-full z-40"
+                class="bg-white flex max-lg:flex-col max-lg:absolute top-16 md:top-20 lg:top-0 max-lg:left-0 max-lg:w-full z-40"
             >
                 <NavbarLink href="/">Casa de Jesús</NavbarLink>
                 <NavbarLink href="/ayuda">¿Necesitas Ayuda?</NavbarLink>
@@ -182,12 +182,12 @@ enVivo = esDiaYHoraEspecifica(
                     Esperanza y Renacimiento
                 </NavbarLink>
                 <NavbarLink href="/contacto">Contacto</NavbarLink>
-                <div class="md:hidden">
+                <div class="lg:hidden">
                     <NavbarLink href={ENLACE_FACEBOOK} target="_blank">
                         Facebook
                     </NavbarLink>
                 </div>
-                <div class="md:hidden">
+                <div class="lg:hidden">
                     <NavbarLink href={ENLACE_INSTAGRAM} target="_blank">
                         Instagram
                     </NavbarLink>
