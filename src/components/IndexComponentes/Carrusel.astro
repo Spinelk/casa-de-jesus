@@ -1,8 +1,6 @@
-<div id="carrusel" class="relative w-full" data-carousel="slide">
+<div id="carrusel" class="relative w-full" data-carousel-interval="4000" data-carousel="slide">
     <!-- Carrusel -->
-    <div
-        class="relative overflow-hidden h-[40rem] lg:h-[550px] xl:h-[700px] -z-50"
-    >
+    <div class="relative overflow-hidden h-[40rem] lg:h-[550px] xl:h-[700px] -z-50">
         <!-- Item 1 -->
         <div class="hidden duration-1000 ease-in-out" data-carousel-item>
             <img
@@ -45,61 +43,32 @@
         </div>
     </div>
     <!-- Texto -->
-    <div
-        class="absolute top-0 left-0 z-30 h-full w-full flex justify-center items-center"
-    >
+    <div class="absolute top-0 left-0 z-30 h-full w-full flex justify-center items-center">
         <div
             class="max-sm:h-full max-w-6xl sm:max-w-lg md:max-w-xl lg:max-w-4xl xl:max-w-6xl h-fit text-white flex flex-col text-center justify-center items-center bg-black bg-opacity-65 p-4 md:p-10 lg:16"
         >
-            <h1 class="text-5xl font-semibold font-cinzel">
-                Fundación e Iglesia Casa de Jesús
-            </h1>
+            <h1 class="text-5xl font-semibold font-cinzel">Fundación e Iglesia Casa de Jesús</h1>
             <p class="text-xl mt-2 text-gray-200 font-lato">
-                La Fundación Casa de Jesús se erige como un faro de esperanza,
-                ofreciendo un enfoque integral basado en la fe cristiana para
-                aquellos en busca de recuperación. Su compromiso con el
-                bienestar, la accesibilidad y la transformación personal hace de
-                esta fundación un recurso invaluable en la lucha contra la
-                dependencia. No se cobra ninguna tarifa por el tratamiento. Los
-                residentes solo deben cubrir insumos básicos como productos de
-                aseo personal, gastos comunes y transporte.
+                La Fundación Casa de Jesús se erige como un faro de esperanza, ofreciendo un enfoque integral basado en
+                la fe cristiana para aquellos en busca de recuperación. Su compromiso con el bienestar, la accesibilidad
+                y la transformación personal hace de esta fundación un recurso invaluable en la lucha contra la
+                dependencia. No se cobra ninguna tarifa por el tratamiento. Los residentes solo deben cubrir insumos
+                básicos como productos de aseo personal, gastos comunes y transporte.
             </p>
         </div>
     </div>
     <!-- Indicadores -->
-    <div
-        class="absolute max-sm:hidden z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse"
-    >
-        <button
-            type="button"
-            class="w-6 h-1"
-            aria-current="true"
-            aria-label="Slide 1"
-            data-carousel-slide-to="0"></button>
-        <button
-            type="button"
-            class="w-6 h-1"
-            aria-current="false"
-            aria-label="Slide 2"
-            data-carousel-slide-to="1"></button>
-        <button
-            type="button"
-            class="w-6 h-1"
-            aria-current="false"
-            aria-label="Slide 3"
-            data-carousel-slide-to="2"></button>
-        <button
-            type="button"
-            class="w-6 h-1"
-            aria-current="false"
-            aria-label="Slide 4"
-            data-carousel-slide-to="3"></button>
-        <button
-            type="button"
-            class="w-6 h-1"
-            aria-current="false"
-            aria-label="Slide 5"
-            data-carousel-slide-to="4"></button>
+    <div class="absolute max-sm:hidden z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+        <button type="button" class="w-6 h-1" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"
+        ></button>
+        <button type="button" class="w-6 h-1" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"
+        ></button>
+        <button type="button" class="w-6 h-1" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"
+        ></button>
+        <button type="button" class="w-6 h-1" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"
+        ></button>
+        <button type="button" class="w-6 h-1" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"
+        ></button>
     </div>
     <!-- Controles -->
     <button
@@ -108,10 +77,10 @@
         data-carousel-prev
     >
         <span
-            class="inline-flex items-center justify-center w-8 h-16 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60"
+            class="inline-flex items-center justify-center w-8 h-16 transition-all bg-black/65 group-hover:bg-black/45"
         >
             <svg
-                class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+                class="w-4 h-4 text-white rtl:rotate-180"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -133,10 +102,10 @@
         data-carousel-next
     >
         <span
-            class="inline-flex items-center justify-center w-8 h-16 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60"
+            class="inline-flex items-center justify-center w-8 h-16 transition-all bg-black/65 group-hover:bg-black/45"
         >
             <svg
-                class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+                class="w-4 h-4 text-white rtl:rotate-180"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
