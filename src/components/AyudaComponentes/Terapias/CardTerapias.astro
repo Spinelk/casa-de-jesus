@@ -1,0 +1,27 @@
+---
+const { titulo, imagenURL, alt } = Astro.props;
+---
+
+<div
+    class="aspect-[6/3] sm:aspect-[4/1] lg:aspect-[4/3] rounded-md relative overflow-hidden text-white img-hover-zoom"
+>
+    <img
+        src={imagenURL}
+        class="w-full h-full object-cover absolute brightness-50"
+        alt={alt}
+    />
+    <div class="absolute p-4 flex flex-col justify-center h-full w-full">
+        <h3 class="font-extrabold text-2xl">{titulo}</h3>
+        <span class="text-gray-200 text-lg"> <slot /></span>
+    </div>
+</div>
+
+<style>
+    .img-hover-zoom img {
+        transition: transform 0.5s ease;
+    }
+
+    .img-hover-zoom:hover img {
+        transform: scale(1.1);
+    }
+</style>
