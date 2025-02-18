@@ -2,6 +2,7 @@
 const {
     titulo,
 
+    py = "py-10",
     colorFondo = "bg-white",
     colorTexto = "text-gray-800",
     tamañoTitulo = "text-4xl",
@@ -14,7 +15,7 @@ const {
 } = Astro.props;
 ---
 
-<section class={`${colorFondo} ${colorTexto} ${tamañoTexto} py-10 font-medium font-poppins`}>
+<section class={`${colorFondo} ${colorTexto} ${tamañoTexto} ${py} font-medium font-poppins`}>
     <div class="max-w-6xl mx-auto max-xl:px-6">
         <div class="grid gap-10">
             <div class="flex flex-col justify-center text-center ">
@@ -26,7 +27,7 @@ const {
                 imagenURL && (  
                     <div class="flex justify-center">
                         <div class="max-w-5xl w-full mx-auto aspect-[3/2] md:aspect-[3/1]">
-                            <img src={imagenURL} class="object-cover h-full w-full rounded-md" alt={alt} />
+                            <img src={imagenURL} class="object-cover h-full w-full" alt={alt} />
                         </div>
                     </div>
                 )

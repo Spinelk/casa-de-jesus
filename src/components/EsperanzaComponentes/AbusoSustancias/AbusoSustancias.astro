@@ -1,0 +1,36 @@
+---
+import SeccionV from "../../Base/SeccionV.astro";
+import CardEfectos from "./CardEfectos.astro"
+---
+
+<SeccionV titulo="Efectos del Abuso de Sustancias" vertical="true" extra="true" colorFondo="bg-blue-100" py="py-20">
+    <p slot="texto">
+        Las drogas pueden tener una variedad de efectos negativos tanto a corto como a largo plazo en el
+        cuerpo y la mente. Estos efectos pueden incluir:
+    </p>
+    <div
+        slot="extra"
+        class="grid grid-cols-1 lg:grid-cols-2 gap-10 mx-auto font-monserrat font-semibold text-sm text-center"
+    >
+        <CardEfectos titulo="Físicos" imagenURL="voluntario.jpg">
+            Alteraciones en el ritmo cardíaco, presión arterial elevada o baja, problemas respiratorios,
+            daño hepático, trastornos gastrointestinales, entre otros.
+        </CardEfectos>
+
+        <CardEfectos titulo="Psicológicos" imagenURL="salida.jpg">
+            Cambios en el estado de ánimo, como euforia, depresión, ansiedad, irritabilidad; trastornos del
+            sueño, problemas de concentración y memoria, alucinaciones, paranoia.
+        </CardEfectos>
+
+        <CardEfectos titulo="Sociales" imagenURL="gente.jpg">
+            Deterioro en las relaciones interpersonales, aislamiento social, conflictos familiares y
+            laborales, pérdida de la confianza y el apoyo de amigos y seres queridos.
+        </CardEfectos>
+
+        <CardEfectos titulo="Económicos" imagenURL="frente.jpg">
+            Gastos excesivos en la compra de drogas, pérdida de empleo o ingresos debido a problemas
+            laborales relacionados con la adicción, endeudamiento, falta de recursos para cubrir necesidades
+            básicas.
+        </CardEfectos>
+    </div>
+</SeccionV>

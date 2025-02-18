@@ -33,19 +33,19 @@ const alineacionImagen = invertir ? "" : "flex justify-end";
                 imagenURL && (
                     <div class={`${alineacionImagen}`}>
                         <div class="w-full aspect-[3/2] lg:w-[30rem] xl:w-[35rem]">
-                            <img src={imagenURL} class="object-cover h-full w-full rounded-md" alt={alt} />
+                            <img src={imagenURL} class="object-cover h-full w-full" alt={alt} />
                         </div>
                     </div>
                 )
             }
 
-            <!-- {
+            {
                 extra && (
                     <div>
                         <slot name="extra" />
                     </div>
                 )
-            } -->
+            }
         </div>
     </div>
 </section>
