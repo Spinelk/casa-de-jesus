@@ -1,79 +1,65 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
+import Carrusel from "../components/IndexComponentes/Carrusel.astro";
 import Banner from "../components/Banner.astro";
-import Seccion from "../components/Seccion/Seccion.astro";
-import Carrusel from "../components/Carrusel.astro";
+import SeccionH from "../components/Base/SeccionH.astro";
+import SeccionV from "../components/Base/SeccionV.astro";
 ---
 
-<Layout
-    titulo="Bienvenidos"
-    descripcion="Bienvenido a la página web de la Fundación Casa de Jesús."
->
+<Layout titulo="Bienvenidos" descripcion="Bienvenido a la página web de la Fundación Casa de Jesús.">
     <Carrusel />
 
     <article>
-        <div class="py-10">
-            <Seccion
-                titulo="Quienes Somos"
-                imagenURL="voluntario.jpg"
-                vertical="true"
-            >
-                <p slot="texto">
-                    La Fundación Casa de Jesús es una entidad comprometida con
-                    la rehabilitación y el apoyo integral de personas con
-                    problemas de dependencia a las drogas y alcohol. Se trata de
-                    una organización sin fines de lucro privada, con reuniones
-                    regulares todos los sábados a las 11 am en la iglesia
-                    ubicada en Oliveto 200, Comuna de Talagante.
-                </p>
-            </Seccion>
-        </div>
+        <SeccionV titulo="Quienes Somos" imagenURL="voluntario.jpg" vertical="true" py="py-20">
+            <p slot="texto">
+                La Fundación Casa de Jesús es una entidad comprometida con la rehabilitación y el apoyo integral de
+                personas con problemas de dependencia a las drogas y alcohol. Se trata de una organización sin fines de
+                lucro privada, con reuniones regulares todos los sábados a las 11 am en la iglesia ubicada en Oliveto
+                200, Comuna de Talagante.
+            </p>
+        </SeccionV>
 
         <Banner titulo="Desarrollo Y Expansión" imagen="gente.jpg">
-            Iniciando su labor en Santiago, la Fundación Casa de Jesús ha
-            crecido significativamente. Con el tiempo, se establecieron dos
-            sedes adicionales: una en la Isla de Maipo, centrada en jóvenes con
-            dependencia, y otra en Malloco, destinada a adultos en situación de
-            calle y con problemas de alcoholismo. La fundación se ha convertido
-            en un faro de esperanza para aquellos que más lo necesitan,
-            proporcionando un enfoque Biopsicosocial y espiritual para la
-            rehabilitación.
+            Iniciando su labor en Santiago, la Fundación Casa de Jesús ha crecido significativamente. Con el tiempo, se
+            establecieron dos sedes adicionales: una en la Isla de Maipo, centrada en jóvenes con dependencia, y otra en
+            Malloco, destinada a adultos en situación de calle y con problemas de alcoholismo. La fundación se ha
+            convertido en un faro de esperanza para aquellos que más lo necesitan, proporcionando un enfoque
+            Biopsicosocial y espiritual para la rehabilitación.
         </Banner>
 
         <div class="py-10">
-            <Seccion titulo="Historia" imagenURL="voluntario.jpg">
+            <SeccionH titulo="Historia" imagenURL="voluntario.jpg">
                 <p slot="texto">
-                    La Fundación Casa de Jesús abrió sus puertas el 3 de
-                    noviembre de 2008, cuando dos visionarios, guiados por su fe
-                    cristiana y una profunda compasión por los demás, decidieron
-                    unir fuerzas para abordar la creciente problemática de la
-                    dependencia a las drogas y el alcohol. La fundación nació
-                    con la misión de proporcionar ayuda integral a aquellos que
-                    se encontraban inmersos en el flagelo de las adicciones y
-                    carecían de recursos para una rehabilitación completa.
+                    La Fundación Casa de Jesús abrió sus puertas el 3 de noviembre de 2008, cuando dos visionarios,
+                    guiados por su fe cristiana y una profunda compasión por los demás, decidieron unir fuerzas para
+                    abordar la creciente problemática de la dependencia a las drogas y el alcohol. La fundación nació
+                    con la misión de proporcionar ayuda integral a aquellos que se encontraban inmersos en el flagelo de
+                    las adicciones y carecían de recursos para una rehabilitación completa.
                 </p>
-            </Seccion>
-            <Seccion
-                titulo="Misión"
-                imagenURL="voluntario.jpg"
-                invertir="true"
-                fondo="bg-gray-100"
+            </SeccionH>
+            <SeccionH titulo="Misión" imagenURL="voluntario.jpg" invertir="true" colorFondo="bg-gray-100">
+                <p slot="texto">
+                    Ofrecer un camino de recuperación basado en principios cristianos, proporcionando apoyo espiritual,
+                    terapéutico, psicológico y biopsicosocial a aquellos que luchan contra la dependencia.
+                </p>
+            </SeccionH>
+            <SeccionH titulo="Visión" imagenURL="voluntario.jpg">
+                <p slot="texto">
+                    Ser un faro de esperanza y transformación, guiando a individuos hacia la libertad y la restauración,
+                    a través del poder sanador de la fe cristiana.
+                </p>
+            </SeccionH>
+        </div>
+
+        <div class="py-14 bg-azul-milagro">
+            <div
+                class="max-w-6xl max-xl:p-4 mx-auto text-center font-cinzel font-bold text-lg sm:text-xl md:text-2xl text-white"
             >
-                <p slot="texto">
-                    Ofrecer un camino de recuperación basado en principios
-                    cristianos, proporcionando apoyo espiritual, terapéutico,
-                    psicológico y biopsicosocial a aquellos que luchan contra la
-                    dependencia.
+                <p>
+                    <span class="italic font-medium">"Todo lo puedo en Cristo que me fortalece."</span> - Filipenses 4:13
                 </p>
-            </Seccion>
-            <Seccion titulo="Visión" imagenURL="voluntario.jpg">
-                <p slot="texto">
-                    Ser un faro de esperanza y transformación, guiando a
-                    individuos hacia la libertad y la restauración, a través del
-                    poder sanador de la fe cristiana.
-                </p>
-            </Seccion>
+            </div>
         </div>
     </article>
 </Layout>

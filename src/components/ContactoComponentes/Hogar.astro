@@ -1,0 +1,21 @@
+---
+import SeccionH from "../Base/SeccionH.astro";
+
+const { titulo, imagenURL, colorFondo, invertir, direccion, telefono = "56 9 xxxx xxxx" } = Astro.props;
+---
+
+<SeccionH titulo={titulo} imagenURL={imagenURL} colorFondo={colorFondo} invertir={invertir}>
+    <div slot="texto">
+        <p>
+            <slot />
+        </p>
+
+        <p class="font-semibold text-gray-700 text-xl mt-3 leading-5 italic">
+            {direccion}
+        </p>
+
+        <p class="font-semibold text-gray-700 text-xl mt-3">
+            Telefono: <a href="tel:{telefono}" class="italic hover:underline">+{telefono}</a>
+        </p>
+    </div>
+</SeccionH>

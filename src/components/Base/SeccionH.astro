@@ -1,0 +1,51 @@
+---
+const {
+    titulo,
+
+    py = "py-5",
+    colorFondo = "bg-white",
+    colorTexto = "text-gray-800",
+    tamañoTitulo = "text-4xl",
+    tamañoTexto = "text-lg",
+    invertir = false,
+
+    imagenURL,
+    mapaURL,
+    alt,
+
+    extra = false,
+} = Astro.props;
+
+// Invertir columnas
+const ordenTexto = invertir ? "lg:order-2" : "";
+const alineacionImagen = invertir ? "" : "flex justify-end";
+---
+
+<section class={`${colorFondo} ${colorTexto} ${tamañoTexto} ${py}  font-medium font-poppins`}>
+    <div class="max-w-6xl mx-auto max-xl:px-6">
+        <div class="grid lg:grid-cols-2 gap-5 lg:gap-10">
+            <div class={`flex flex-col justify-center ${ordenTexto} max-lg:text-center`}>
+                {titulo && <h2 class={`${tamañoTitulo} font-bold mb-5`}>{titulo}</h2>}
+                <slot name="texto" />
+            </div>
+
+            {
+                imagenURL && (
+                    <div class={`${alineacionImagen}`}>
+                        <div class="w-full aspect-[3/2] lg:w-[30rem] xl:w-[35rem]">
+                            <img src={imagenURL} class="object-cover h-full w-full" alt={alt} />
+                        </div>
+                    </div>
+                )
+            }
+
+            {
+                extra && (
+                    <div>
+                        <slot name="extra" />
+                    </div>
+                )
+            }
+        </div>
+    </div>
+</section>

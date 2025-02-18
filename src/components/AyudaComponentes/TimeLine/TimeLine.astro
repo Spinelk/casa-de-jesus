@@ -1,0 +1,25 @@
+---
+import SeccionV from "../../Base/SeccionV.astro";
+import TimeLineItem from "./TimeLineItem.astro";
+---
+
+<SeccionV titulo="Proceso de Admisión" extra="true">
+    <p slot="texto">
+        Para ingresar a la Fundación Casa de Jesús, los interesados deben seguir un proceso de admisión que incluye una
+        entrevista y el cumplimiento de ciertos requisitos.
+    </p>
+
+    <ol slot="extra" class="grid grid-cols-1 sm:grid-cols-3 max-w-6xl mx-auto">
+        <TimeLineItem titulo="Llamar al número xxx para una entrevista" numero="1">
+            El primer paso para ingresar a la fundación es llamar al número xxx para coordinar una entrevista.
+        </TimeLineItem>
+        <TimeLineItem titulo="1 semana sin consumir sustancias antes de ingresar" numero="2">
+            Antes de ser admitido en alguno de los hogares el residente debe abstenerse de consumir sustancias por al
+            menos una semana.
+        </TimeLineItem>
+        <TimeLineItem titulo="Se requiere un apoderado para el residente" numero="3">
+            Para ser admitido en la fundación, el residente debe contar con un apoderado que se comprometa a participar
+            activamente en el proceso de rehabilitación.
+        </TimeLineItem>
+    </ol>
+</SeccionV>

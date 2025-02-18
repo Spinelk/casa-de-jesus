@@ -1,0 +1,45 @@
+---
+const {
+    titulo,
+
+    py = "py-10",
+    colorFondo = "bg-white",
+    colorTexto = "text-gray-800",
+    tamañoTitulo = "text-4xl",
+    tamañoTexto = "text-lg",
+
+    imagenURL,
+    alt,
+
+    extra = false,
+} = Astro.props;
+---
+
+<section class={`${colorFondo} ${colorTexto} ${tamañoTexto} ${py} font-medium font-poppins`}>
+    <div class="max-w-6xl mx-auto max-xl:px-6">
+        <div class="grid gap-10">
+            <div class="flex flex-col justify-center text-center ">
+                {titulo && <h2 class={`${tamañoTitulo} font-bold mb-5`}>{titulo}</h2>}
+                <slot name="texto" />
+            </div>
+
+            {
+                imagenURL && (  
+                    <div class="flex justify-center">
+                        <div class="max-w-6xl w-full mx-auto aspect-[3/2] md:aspect-[3/1]">
+                            <img src={imagenURL} class="object-cover h-full w-full" alt={alt} />
+                        </div>
+                    </div>
+                )
+            }
+
+            {
+                extra && (
+                    <div>
+                        <slot name="extra" />
+                    </div>
+                )
+            }
+        </div>
+    </div>
+</section>

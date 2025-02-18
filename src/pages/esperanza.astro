@@ -2,9 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 
 import Banner from "../components/Banner.astro";
-import Seccion from "../components/Seccion/Seccion.astro";
-import TimeLineItem from "../components/Seccion/TimeLineItem.astro";
-import CardImagen from "../components/Seccion/CardImagen.astro";
+import SeccionV from "../components/Base/SeccionV.astro";
+
+import AbusoSustancias from "../components/EsperanzaComponentes/AbusoSustancias/AbusoSustancias.astro";
+import Historias from "../components/EsperanzaComponentes/Historias/Historias.astro";
+import Recursos from "../components/EsperanzaComponentes/Recursos/Recursos.astro";
 ---
 
 <Layout
@@ -12,233 +14,66 @@ import CardImagen from "../components/Seccion/CardImagen.astro";
     descripcion="Informate sobre el consumo de drogas y sus efectos, historias de recuperación y recursos para obtener ayuda."
 >
     <article>
-        <Banner
-            titulo="Esperanza y Renacimiento"
-            imagen="entrada.jpg"
-            tamañoTitulo="text-5xl"
-            header="true"
-        >
-            En este espacio, queremos compartir contigo historias de esperanza,
-            fortaleza y superación. La adicción a las drogas puede parecer un
-            camino oscuro y solitario, pero queremos mostrarte que siempre hay
-            una luz al final del túnel. Aquí encontrarás información sobre cómo
-            reconocer una adicción, cómo ofrecer apoyo y, lo más importante,
-            cómo encontrar la ayuda que necesitas para comenzar un camino hacia
-            la recuperación y el renacer.
+        <Banner titulo="Esperanza y Renacimiento" imagen="entrada.jpg" tamañoTitulo="text-5xl" header="true">
+            En este espacio, queremos compartir contigo historias de esperanza, fortaleza y superación. La adicción a
+            las drogas puede parecer un camino oscuro y solitario, pero queremos mostrarte que siempre hay una luz al
+            final del túnel. Aquí encontrarás información sobre cómo reconocer una adicción, cómo ofrecer apoyo y, lo
+            más importante, cómo encontrar la ayuda que necesitas para comenzar un camino hacia la recuperación y el
+            renacer.
         </Banner>
 
-        <div class="py-10">
-            <Seccion titulo="¿Cómo Reconocer una Adicción?" vertical="true">
-                <p slot="texto">
-                    A menudo, los signos de una adicción pueden pasar
-                    desapercibidos, pero es importante estar atento a los
-                    cambios en el comportamiento y la salud de tus seres
-                    queridos. Algunos indicadores pueden incluir cambios
-                    drásticos en el estado de ánimo, problemas financieros,
-                    descuido personal, cambios en el círculo social y
-                    comportamiento evasivo o defensivo. Si notas alguno de estos
-                    signos, es crucial abordar la situación con compasión y
-                    empatía.
-                </p>
-            </Seccion>
-        </div>
+        <SeccionV titulo="¿Cómo Reconocer una Adicción?" vertical="true" py="py-20">
+            <p slot="texto">
+                A menudo, los signos de una adicción pueden pasar desapercibidos, pero es importante estar atento a los
+                cambios en el comportamiento y la salud de tus seres queridos. Algunos indicadores pueden incluir
+                cambios drásticos en el estado de ánimo, problemas financieros, descuido personal, cambios en el círculo
+                social y comportamiento evasivo o defensivo. Si notas alguno de estos signos, es crucial abordar la
+                situación con compasión y empatía.
+            </p>
+        </SeccionV>
 
-        <div class="py-10 bg-blue-100">
-            <Seccion
-                titulo="Efectos del Abuso de Sustancias"
-                vertical="true"
-                extra="true"
-                fondo="bg-blue-100"
-            >
-                <p slot="texto">
-                    Las drogas pueden tener una variedad de efectos negativos
-                    tanto a corto como a largo plazo en el cuerpo y la mente.
-                    Estos efectos pueden incluir:
-                </p>
-                <div
-                    slot="extra"
-                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-5 sm:px-9 xl:px-5 max-w-7xl mx-auto font-monserrat font-semibold text-sm text-center"
-                >
-                    <CardImagen titulo="Físicos" imagenURL="voluntario.jpg">
-                        Alteraciones en el ritmo cardíaco, presión arterial
-                        elevada o baja, problemas respiratorios, daño hepático,
-                        trastornos gastrointestinales, entre otros.
-                    </CardImagen>
+        <AbusoSustancias />
 
-                    <CardImagen titulo="Psicológicos" imagenURL="salida.jpg">
-                        Cambios en el estado de ánimo, como euforia, depresión,
-                        ansiedad, irritabilidad; trastornos del sueño, problemas
-                        de concentración y memoria, alucinaciones, paranoia.
-                    </CardImagen>
-
-                    <CardImagen titulo="Sociales" imagenURL="gente.jpg">
-                        Deterioro en las relaciones interpersonales, aislamiento
-                        social, conflictos familiares y laborales, pérdida de la
-                        confianza y el apoyo de amigos y seres queridos.
-                    </CardImagen>
-
-                    <CardImagen titulo="Económicos" imagenURL="frente.jpg">
-                        Gastos excesivos en la compra de drogas, pérdida de
-                        empleo o ingresos debido a problemas laborales
-                        relacionados con la adicción, endeudamiento, falta de
-                        recursos para cubrir necesidades básicas.
-                    </CardImagen>
-                </div>
-            </Seccion>
-        </div>
-
-        <div class="py-10">
-            <Seccion
-                titulo="¿Qué dice la Organización Mundial de la Salud (OMS)?"
-                vertical="true"
-            >
-                <p slot="texto">
-                    Según la OMS, la drogadicción es un problema de salud
-                    pública que afecta a personas de todas las edades, géneros y
-                    estratos sociales en todo el mundo. La prevención, el
-                    tratamiento y la rehabilitación son fundamentales para
-                    abordar este problema de manera efectiva y promover la salud
-                    y el bienestar de las personas.
-                </p>
-            </Seccion>
-        </div>
+        <SeccionV titulo="¿Qué dice la Organización Mundial de la Salud (OMS)?" vertical="true" py="py-20">
+            <p slot="texto">
+                Según la OMS, la drogadicción es un problema de salud pública que afecta a personas de todas las edades,
+                géneros y estratos sociales en todo el mundo. La prevención, el tratamiento y la rehabilitación son
+                fundamentales para abordar este problema de manera efectiva y promover la salud y el bienestar de las
+                personas.
+            </p>
+        </SeccionV>
 
         <Banner titulo="Cómo Podemos Ayudar" imagen="jardin.jpg" header="true">
-            Ofrecer apoyo a alguien que lucha contra la adicción puede marcar la
-            diferencia entre la desesperación y la esperanza. Escucha sin
-            juzgar, muestra tu amor y preocupación, y ofrece recursos y opciones
-            de tratamiento. Recuerda que la recuperación es un proceso difícil,
-            pero con el apoyo adecuado, cada paso hacia adelante es un triunfo.
+            Ofrecer apoyo a alguien que lucha contra la adicción puede marcar la diferencia entre la desesperación y la
+            esperanza. Escucha sin juzgar, muestra tu amor y preocupación, y ofrece recursos y opciones de tratamiento.
+            Recuerda que la recuperación es un proceso difícil, pero con el apoyo adecuado, cada paso hacia adelante es
+            un triunfo.
         </Banner>
 
-        <div class="py-10">
-            <Seccion
-                titulo="Encuentra Ayuda y Esperanza"
-                vertical="true"
-                imagenURL="voluntario.jpg"
-            >
-                <p slot="texto">
-                    La Fundación Casa de Jesús se erige como un faro de
-                    esperanza, ofreciendo un enfoque integral basado en la fe
-                    cristiana para aquellos en busca de recuperación. Su
-                    compromiso con el bienestar, la accesibilidad y la
-                    transformación personal hace de esta fundación un recurso
-                    invaluable en la lucha contra la dependencia.
-                    <br />
-                    <br />
-                    Si tú o alguien que conoces está luchando contra la adicción,
-                    recuerda que no estás solo. Hay una comunidad de personas dispuestas
-                    a ofrecer apoyo y orientación en este viaje hacia la recuperación.
-                    Explora los recursos disponibles y da el primer paso hacia un
-                    futuro libre de drogas.
-                </p>
-            </Seccion>
-        </div>
+        <SeccionV titulo="Encuentra Ayuda y Esperanza" vertical="true" imagenURL="voluntario.jpg" py="py-20">
+            <p slot="texto">
+                La Fundación Casa de Jesús se erige como un faro de esperanza, ofreciendo un enfoque integral basado en
+                la fe cristiana para aquellos en busca de recuperación. Su compromiso con el bienestar, la accesibilidad
+                y la transformación personal hace de esta fundación un recurso invaluable en la lucha contra la
+                dependencia.
+                <br />
+                <br />
+                Si tú o alguien que conoces está luchando contra la adicción, recuerda que no estás solo. Hay una comunidad
+                de personas dispuestas a ofrecer apoyo y orientación en este viaje hacia la recuperación. Explora los recursos
+                disponibles y da el primer paso hacia un futuro libre de drogas.
+            </p>
+        </SeccionV>
 
-        <div class="py-10 bg-gray-100">
-            <Seccion
-                titulo="Historias de rehabilitación"
-                vertical="true"
-                fondo="bg-gray-100"
-            >
-                <p slot="texto">
-                    Queremos compartir contigo testimonios reales de personas
-                    que han superado la adicción y han encontrado una nueva vida
-                    llena de esperanza y propósito. Estas historias inspiradoras
-                    demuestran que la recuperación es posible, y que cada
-                    persona tiene el potencial de escribir su propio capítulo de
-                    renacimiento.
-                </p>
-            </Seccion>
+        <Historias />
 
-            <Seccion
-                titulo="Testimonio 1"
-                imagenURL="jardin.jpg"
-                fondo="bg-gray-100"
-            >
-                <p slot="texto">
-                    Queremos compartir contigo testimonios reales de personas
-                    que han superado la adicción y han encontrado una nueva vida
-                    llena de esperanza y propósito. Estas historias inspiradoras
-                    demuestran que la recuperación es posible, y que cada
-                    persona tiene el potencial de escribir su propio capítulo de
-                    renacimiento.
-                </p>
-            </Seccion>
-
-            <Seccion
-                titulo="Testimonio 2"
-                invertir="true"
-                imagenURL="jardin.jpg"
-                fondo="bg-gray-100"
-            >
-                <p slot="texto">
-                    Queremos compartir contigo testimonios reales de personas
-                    que han superado la adicción y han encontrado una nueva vida
-                    llena de esperanza y propósito. Estas historias inspiradoras
-                    demuestran que la recuperación es posible, y que cada
-                    persona tiene el potencial de escribir su propio capítulo de
-                    renacimiento.
-                </p>
-            </Seccion>
-        </div>
-
-        <div class="py-10">
-            <Seccion titulo="Recursos Adicionales" extra="true">
-                <p slot="texto">
-                    Para obtener más información sobre las drogas, la
-                    drogadicción y cómo obtener ayuda, te recomendamos consultar
-                    los recursos proporcionados por organizaciones de salud y
-                    bienestar, así como buscar ayuda profesional si tú o alguien
-                    que conoces está luchando contra la adicción a las drogas.
-                </p>
-                <div slot="extra">
-                    <ul class="italic">
-                        <li class="hover:underline mb-5">
-                            <a
-                                href="https://www.paho.org/es/temas/abuso-sustancias"
-                                target="_blank"
-                            >
-                                Organización Panamericana de la Salud
-                            </a>
-                        </li>
-                        <li class="hover:underline mb-5">
-                            <a
-                                href="https://www.paho.org/es/temas/abuso-sustancias"
-                                target="_blank"
-                            >
-                                Recurso 2
-                            </a>
-                        </li>
-                        <li class="hover:underline mb-5">
-                            <a
-                                href="https://www.paho.org/es/temas/abuso-sustancias"
-                                target="_blank"
-                            >
-                                Recurso 3
-                            </a>
-                        </li>
-                        <li class="hover:underline mb-5">
-                            <a
-                                href="https://www.paho.org/es/temas/abuso-sustancias"
-                                target="_blank"
-                            >
-                                Recurso 4
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </Seccion>
-        </div>
+        <Recursos />
 
         <div class="py-14 bg-azul-milagro">
             <div
                 class="max-w-6xl max-xl:p-4 mx-auto text-center font-cinzel font-bold text-lg sm:text-xl md:text-2xl text-white"
             >
                 <p>
-                    <span class="italic font-medium"
-                        >"Todo lo puedo en Cristo que me fortalece."</span
-                    > - Filipenses 4:13
+                    <span class="italic font-medium">"Todo lo puedo en Cristo que me fortalece."</span> - Filipenses 4:13
                 </p>
             </div>
         </div>
