@@ -1,0 +1,29 @@
+---
+const { colorBg, colorText, hoverColorText, colorBorder, groupHoverColorBg, href } = Astro.props;
+---
+
+<div
+    class={`flex flex-col justify-center sm:h-32 ${colorBg} text-white p-2 px-1 border-4 ${colorBorder} group transition-all hover:bg-white ${hoverColorText} `}
+>
+    <a href={href} target="_blank">
+        <div class="grid max-sm:grid-cols-10 sm:grid-rows-2 gap-2 ">
+            <div class="max-sm:col-span-2 flex justify-center items-end ">
+                <div
+                    class={`bg-white rounded-full h-12 w-12 aspect-square flex items-center justify-center transition-all ${groupHoverColorBg}`}
+                >
+                    <svg
+                        class={`w-7 h-7 ${colorText} transition-all group-hover:text-white`}
+                        aria-hidden="true"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <slot name="icono" />
+                    </svg>
+                </div>
+            </div>
+            <div class="max-sm:col-span-8 max-sm:justify-start max-sm:text-start lg:text-sm xl:text-base flex justify-center items-center">
+                <slot class="text-white" name="texto" />
+            </div>
+        </div>
+    </a>
+</div>

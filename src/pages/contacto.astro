@@ -5,6 +5,13 @@ import Banner from "../components/Banner.astro";
 
 import Informacion from "../components/ContactoComponentes/Informacion.astro";
 import Hogar from "../components/ContactoComponentes/Hogar.astro";
+
+import { TELEFONO_CONTACTO } from "../consts";
+import { ENLACE_INSTAGRAM } from "../consts";
+import { ENLACE_FACEBOOK } from "../consts";
+
+import ContactoItem from "../components/ContactoComponentes/ContactoItem.astro";
+import SeccionV from "../components/Base/SeccionV.astro";
 ---
 
 <Layout
@@ -13,17 +20,22 @@ import Hogar from "../components/ContactoComponentes/Hogar.astro";
 >
     <article>
         <Banner titulo="Contacto" imagen="Contacto.jpg" alt="Contacto" tamañoTitulo="text-5xl" header="true">
-            Si buscas información sobre nuestras sedes o necesitas contactarnos , aquí encontrarás toda la información
-            que necesitas. También puedes visitarnos en nuestras sedes en Santiago, la Región del Bio Bio y la Región de
-            Coquimbo.
+            Si buscas más información sobre nuestro trabajo o deseas contactarnos, aquí encontrarás toda la información
+            que necesitas. También puedes visitarnos en nuestros hogares en Santiago, la Región del Bio Bio y la Región
+            de Coquimbo.
         </Banner>
+
+        <!--  -->
 
         <Informacion />
 
+        <!--  -->
+
+        <div class="py-2 lg:py-4 bg-blue-100"></div>
         <Hogar
             titulo="Casa de Jesús Talagante"
             direccion="Oliveto 200, Talagante. Santiago"
-            imagenURL="voluntario.jpg"
+            imagenURL="./hogares/CasaDeJesusTalagante.webp"
             colorFondo="bg-blue-100"
             >Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur fuga alias laudantium ipsa facere at
             distinctio.</Hogar
@@ -32,7 +44,7 @@ import Hogar from "../components/ContactoComponentes/Hogar.astro";
         <Hogar
             titulo="Hogar de Hombres"
             direccion="Camino San José Parcela Numero 12 Monte las Mercedes, Isla de Maipo. Santiago"
-            imagenURL="voluntario.jpg"
+            imagenURL="placeholder.png"
             invertir="true"
             >Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur fuga alias laudantium ipsa facere at
             distinctio.</Hogar
@@ -42,7 +54,7 @@ import Hogar from "../components/ContactoComponentes/Hogar.astro";
             titulo="Hogar de Mujeres"
             direccion="San Andres 4465, Cerrillos. Santiago"
             telefono="56 2 683 2719"
-            imagenURL="voluntario.jpg"
+            imagenURL="./hogares/HogarDeMujeres.webp"
             colorFondo="bg-pink-100"
             >Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur fuga alias laudantium ipsa facere at
             distinctio.</Hogar
@@ -52,7 +64,7 @@ import Hogar from "../components/ContactoComponentes/Hogar.astro";
             titulo="Región del Bio Bio"
             direccion="Paradero la Higuerilla kilómetro 6 ½, camino a Yumbel"
             telefono="569 4143 4988"
-            imagenURL="voluntario.jpg"
+            imagenURL="placeholder.png"
             invertir="true"
             >Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur fuga alias laudantium ipsa facere at
             distinctio.</Hogar
@@ -62,10 +74,12 @@ import Hogar from "../components/ContactoComponentes/Hogar.astro";
             titulo="Región de Coquimbo"
             direccion="Panamericana norte, km. 492, parcela 16, El Arrayán. La Serena"
             telefono="569 4750 8507"
-            imagenURL="voluntario.jpg"
-            colorFondo="bg-gray-100"
+            imagenURL="placeholder.png"
+            colorFondo="bg-gray-200"
             >Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur fuga alias laudantium ipsa facere at
             distinctio.</Hogar
         >
+        <div class="py-2 lg:py-4 bg-gray-200"></div>
+        <!--  -->
     </article>
 </Layout>
