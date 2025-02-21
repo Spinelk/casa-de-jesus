@@ -4,10 +4,10 @@ const { retractil = false } = Astro.props;
 const retractableClasses = retractil ? "hidden lg:inline" : "";
 ---
 
-<a class="flex items-center space-x-3 rtl:space-x-reverse" href="/">
-    <img src="logo.png" class="h-10 md:h-16" alt="Logo Fundación" />
+<a class="flex items-center  rtl:space-x-reverse" href="/">
+    <img src="logo.png" class=`${retractableClasses} h-10 md:h-16 mr-3` alt="Logo Fundación" />
     <span
-        class={`${retractableClasses} font-cinzel self-center text-2xl font-bold whitespace-nowrap text-azul-milagro dark:text-white`}
+        class={`font-cinzel self-center text-2xl font-bold whitespace-nowrap text-azul-milagro`}
         >Fundación<span class="block -mt-2">Casa de Jesús</span></span
     >
 </a>
