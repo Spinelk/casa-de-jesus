@@ -2,7 +2,6 @@
 const {
     titulo,
 
-    py = "py-10",
     colorFondo = "bg-white",
     colorTexto = "text-gray-800",
     tamañoTitulo = "text-4xl",
@@ -15,7 +14,7 @@ const {
 } = Astro.props;
 ---
 
-<section class={`${colorFondo} ${colorTexto} ${tamañoTexto} ${py} font-medium font-poppins`}>
+<section class={`${colorFondo} ${colorTexto} ${tamañoTexto} py-8 lg:py-16 font-medium font-poppins`}>
     <div class="max-w-6xl mx-auto px-4 sm:px-6 xl:px-0">
         <div class="grid gap-10">
             <div class="flex flex-col justify-center">

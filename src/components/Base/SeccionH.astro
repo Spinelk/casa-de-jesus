@@ -2,7 +2,6 @@
 const {
     titulo,
 
-    py = "py-5",
     colorFondo = "bg-white",
     colorTexto = "text-gray-800",
     tamañoTitulo = "text-4xl",
@@ -21,7 +20,7 @@ const ordenTexto = invertir ? "lg:order-2" : "";
 const alineacionImagen = invertir ? "" : "flex justify-end";
 ---
 
-<section class={`${colorFondo} ${colorTexto} ${tamañoTexto} ${py}  font-medium font-poppins`}>
+<section class={`${colorFondo} ${colorTexto} ${tamañoTexto} py-4 lg:py-8  font-medium font-poppins`}>
     <div class="max-w-6xl mx-auto px-4 sm:px-6 xl:px-0">
         <div class="grid lg:grid-cols-2 gap-5 lg:gap-10">
             <div class={`flex flex-col justify-center ${ordenTexto}`}>
