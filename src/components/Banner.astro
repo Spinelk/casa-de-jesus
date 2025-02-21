@@ -2,7 +2,9 @@
 const {
     titulo,
     imagen,
+
     header = false,
+
     tamañoTitulo = "text-4xl",
     tamañoTexto = "text-lg",
 } = Astro.props;
@@ -13,7 +15,7 @@ const textoClases = tamañoTexto;
 ---
 
 <section
-    class="w-full aspect-[2/3] sm:aspect-[2/1] md:aspect-[5/2] lg:aspect-[4/1] relative"
+    class="w-full relative"
 >
     <img
         src={imagen}
@@ -21,10 +23,10 @@ const textoClases = tamañoTexto;
         alt="Imagen Banner"
     />
     <div
-        class={`${textoClases} relative flex flex-col justify-center items-center w-full h-full font-poppins font-medium text-white`}
+        class="relative flex flex-col py-8 lg:min-h-80 justify-center items-center w-full h-full font-poppins font-medium text-white"
     >
         <div
-            class="flex flex-col justify-center items-center max-w-5xl px-6 text-center"
+            class="flex flex-col justify-center max-w-6xl px-4 sm:px-6 xl:px-0 lg:text-center"
         >
             {
                 header && (
@@ -36,7 +38,7 @@ const textoClases = tamañoTexto;
                     <h2 class={`${tituloClases} font-bold mb-5`}>{titulo}</h2>
                 )
             }
-            <p>
+            <p class={`${textoClases}`}>
                 <slot />
             </p>
         </div>
