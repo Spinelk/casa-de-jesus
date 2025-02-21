@@ -1,86 +1,81 @@
 ---
 import SeccionV from "../Base/SeccionV.astro";
+import ContactoItem from "./ContactoItem.astro";
 
-import { ENLACE_FACEBOOK } from "../../consts";
+import { TELEFONO_CONTACTO } from "../../consts";
 import { ENLACE_INSTAGRAM } from "../../consts";
+import { ENLACE_FACEBOOK } from "../../consts";
 ---
 
 <SeccionV titulo="Información de Contacto" vertical="true" extra="true" py="py-20">
-    <p slot="texto">Si necesitas contactarnos, puedes hacerlo a través de los siguientes medios.</p>
-    <div slot="extra" class="max-w-5xl mx-auto text-start grid sm:grid-cols-2 gap-6">
-        <div class="grid grid-cols-8">
-            <div>
-                <div class="bg-green-400 rounded-full w-12 aspect-square flex items-center justify-center">
-                    <svg
-                        class="w-6 h-6 text-white"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                    >
-                        <path
-                            d="M8 4a2.6 2.6 0 0 0-2 .9 6.2 6.2 0 0 0-1.8 6 12 12 0 0 0 3.4 5.5 12 12 0 0 0 5.6 3.4 6.2 6.2 0 0 0 6.6-2.7 2.6 2.6 0 0 0-.7-3L18 12.9a2.7 2.7 0 0 0-3.8 0l-.6.6a.8.8 0 0 1-1.1 0l-1.9-1.8a.8.8 0 0 1 0-1.2l.6-.6a2.7 2.7 0 0 0 0-3.8L10 4.9A2.6 2.6 0 0 0 8 4Z"
-                        ></path>
-                    </svg>
-                </div>
-            </div>
-            <div class="col-span-6 flex items-center ml-4">
-                <a href="tel:5626832719" class="hover:underline">(2) 2 683 2719</a>
-            </div>
-        </div>
+    <p slot="texto">Si necesitas contactarnos, puedes hacerlo a través de los siguientes medios:</p>
+    <div slot="extra" class="max-w-6xl mx-auto text-start">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 text-center">
+            <ContactoItem
+                colorBg="bg-green-500"
+                colorText="text-green-500"
+                colorBorder="border-green-500"
+                hoverColorText="hover:text-green-500"
+                groupHoverColorBg="group-hover:bg-green-500"
+                href=""
+            >
+                <path
+                    slot="icono"
+                    d="M8 4a2.6 2.6 0 0 0-2 .9 6.2 6.2 0 0 0-1.8 6 12 12 0 0 0 3.4 5.5 12 12 0 0 0 5.6 3.4 6.2 6.2 0 0 0 6.6-2.7 2.6 2.6 0 0 0-.7-3L18 12.9a2.7 2.7 0 0 0-3.8 0l-.6.6a.8.8 0 0 1-1.1 0l-1.9-1.8a.8.8 0 0 1 0-1.2l.6-.6a2.7 2.7 0 0 0 0-3.8L10 4.9A2.6 2.6 0 0 0 8 4Z"
+                ></path>
+                <span slot="texto">{TELEFONO_CONTACTO}</span>
+            </ContactoItem>
 
-        <div class="grid grid-cols-8">
-            <div>
-                <div class="bg-blue-400 rounded-full w-12 aspect-square flex items-center justify-center">
-                    <svg
-                        class="w-6 h-6 text-white"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                    >
-                        <path
-                            fill-rule="evenodd"
-                            d="M12 2c.4 0 .8.3 1 .6l7 18a1 1 0 0 1-1.4 1.3L13 19.5V13a1 1 0 1 0-2 0v6.5L5.4 22A1 1 0 0 1 4 20.6l7-18a1 1 0 0 1 1-.6Z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </div>
-            </div>
-            <div class="col-span-6 flex items-center ml-4">ctcasadejesus@gmail.com</div>
-        </div>
+            <ContactoItem
+                colorBg="bg-pink-700"
+                colorText="text-pink-700"
+                colorBorder="border-pink-700"
+                hoverColorText="hover:text-pink-700"
+                groupHoverColorBg="group-hover:bg-pink-700"
+                href={ENLACE_INSTAGRAM}
+            >
+                <path
+                    slot="icono"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
+                    clip-rule="evenodd"></path>
+                <span slot="texto">@casadejesusoficial</span>
+            </ContactoItem>
 
-        <div class="grid grid-cols-8">
-            <div>
-                <div class="bg-blue-700 rounded-full w-12 aspect-square flex items-center justify-center">
-                    <span class="font-bold text-white">F</span>
-                </div>
-            </div>
-            <div class="col-span-6 flex items-center ml-4">
-                <a href={ENLACE_FACEBOOK} target="_blank" class="hover:underline">Fundación e Iglesia "Casa de Jesús"</a
-                >
-            </div>
-        </div>
-        
-        <div class="grid grid-cols-8">
-            <div>
-                <div class="bg-pink-500 rounded-full w-12 aspect-square flex items-center justify-center">
-                    <svg
-                        class="w-6 h-6 text-white"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                    >
-                        <path
-                            fill-rule="evenodd"
-                            d="M7.5 4.6A2 2 0 0 1 8.9 4h6.2c.5 0 1 .2 1.4.6L17.9 6H19a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8c0-1.1.9-2 2-2h1l1.5-1.4ZM10 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm2-4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </div>
-            </div>
-            <div class="col-span-6 flex items-center ml-4">
-                <a href={ENLACE_INSTAGRAM} target="_blank" class="hover:underline">@casadejesusoficial</a>
-            </div>
+            <ContactoItem
+                colorBg="bg-gray-700"
+                colorText="text-gray-700"
+                colorBorder="border-gray-700"
+                hoverColorText="hover:text-gray-700"
+                groupHoverColorBg="group-hover:bg-gray-700"
+            >
+                <path
+                    slot="icono"
+                    d="M2.038 5.61A2.01 2.01 0 0 0 2 6v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6c0-.12-.01-.238-.03-.352l-.866.65-7.89 6.032a2 2 0 0 1-2.429 0L2.884 6.288l-.846-.677Z"
+                ></path>
+                <path
+                    slot="icono"
+                    d="M20.677 4.117A1.996 1.996 0 0 0 20 4H4c-.225 0-.44.037-.642.105l.758.607L12 10.742 19.9 4.7l.777-.583Z"
+                ></path>
+                <span slot="texto">ctcasadejesus@gmail.com</span>
+            </ContactoItem>
+
+            <ContactoItem
+                colorBg="bg-blue-900"
+                colorText="text-blue-900"
+                colorBorder="border-blue-900"
+                hoverColorText="hover:text-blue-900"
+                groupHoverColorBg="group-hover:bg-blue-900"
+                href={ENLACE_FACEBOOK}
+            >
+                <path
+                    slot="icono"
+                    fill-rule="evenodd"
+                    d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z"
+                    clip-rule="evenodd"></path>
+                <span slot="texto">Fundación e Iglesia "Casa de Jesús"</span>
+            </ContactoItem>
         </div>
     </div>
 </SeccionV>
